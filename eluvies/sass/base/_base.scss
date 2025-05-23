@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+    position: relative;
+    color: $text-color;
+    font-family: "Inter", sans-serif;
+    background-color: #141414 !important;
+    @include text-md;
+}

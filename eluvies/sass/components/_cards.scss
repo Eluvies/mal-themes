@@ -1,0 +1,128 @@
+@use '../../../core/sass/abstracts/variables' as *;
+@use '../abstracts/variables' as *;
+
+.list-item {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: $border-radius-2;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    aspect-ratio: 12 / 17;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.list-table .more-info {
+    display: none;
+}
+
+// Data
+
+.list-table .list-table-data {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: fit-content;
+    padding: $card-padding;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.list-table .list-table-data .data {
+    display: none;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    grid-column: 1 / -1;
+    min-width: 0;
+    
+    &.image, &.title, &.score, &.progress {
+        display: block;
+    }
+    
+    &.image {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    
+    &.image .image {
+        height: auto;
+    }
+    
+    &.title {
+        grid-row: 2;
+    }
+    
+    &.progress {
+        color: rgba(255, 255, 255, .75);
+        grid-column: 1;
+        grid-row: 3;
+
+        span:first-child:before {
+            content: 'Watched: ';
+            display: inline;
+        }
+    }
+
+    &.score {
+        grid-column: 2;
+        grid-row: 3;
+        font-weight: 700;
+    }
+
+    &.score .score-label {
+        color: #f5c518;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            background-color: currentColor;
+            mask-image: $icon-star-url;
+            mask-repeat: no-repeat;
+            mask-position: center calc(50% - 1px);
+            height: $icon-size;
+            width: $icon-size * $icon-star-ratio;
+            margin-right: 1ch;
+        }
+    }
+}
+
+
+#list-container .data.image,
+#list-container .data.image a,
+#list-container .data.image .image,
+#list-container .data.title {
+    width: 100%;
+}
+
+/* Title */
+
+#list-container .icon-watch2,
+#list-container .content-status {
+    display: none;
+}
+
+#list-container .add-edit-more {
+    line-height: 0;
+    font-size: 0;
+}
+
+#list-container .edit,
+#list-container .add {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    display: none;
+}
+
+#list-container .edit a,
+#list-container .add a {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}

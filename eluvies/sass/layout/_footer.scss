@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+footer {
+    background-color: #222222;
+    margin-top: $space-3;
+}
+
+#footer-block {
+    text-align: center;
+    padding: $space-4 $page-padding;
+    width: 100% !important;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+#copyright {
+    @include text-sm;
+}
+
+#recaptcha-terms {
+    @include text-xs;
+    color: darkgray;
+}
+
+#copyright + #recaptcha-terms {
+    margin-top: $space-1;
+}

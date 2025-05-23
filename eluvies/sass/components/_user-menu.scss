@@ -1,0 +1,104 @@
+@use '../abstracts/variables' as *;
+@use 'sass:math';
+
+.list-menu-float {
+    position: fixed;
+    top: $header-height;
+    z-index: 3;
+    background-color: #2E51A2;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: $border-radius-1;
+    min-width: 192px;
+    height: 0;
+    right: max(0px, (100% - $content-max-width) / 2);
+    margin-right: $page-padding;
+
+    &:hover {
+        height: 9 * $dropdown-item-height + 2 * $dropdown-padding;
+    }
+
+    &>* {
+        min-height: 0;
+        overflow: hidden;
+    }
+}
+
+.list-menu-float .icon-menu.profile {
+    position: fixed;
+    top: calc(($header-height - $avatar-size) / 2);
+    right: max(0px, (100% - $content-max-width) / 2);
+    margin-right: $page-padding;
+    background-size: 0px;
+    pointer-events: none;
+    height: $avatar-size;
+
+    &:before {
+        content: '';
+        display: block;
+        width: $avatar-size;
+        aspect-ratio: 1 / 1;
+        background: inherit;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        pointer-events: auto;
+    }
+
+    &:hover {
+        pointer-events: auto;
+    }
+}
+
+.list-menu-float .icon-menu {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+
+    &:not(.profile) {
+        margin-inline: $dropdown-padding;
+    }
+
+    &.quick-add {
+        margin-top: $dropdown-padding;
+    }
+
+    &.setting {
+        margin-bottom: $dropdown-padding;
+    }
+
+    &:not(.profile, .setting),
+    &.setting .text .link-list-setting,
+    &.setting:hover .text .link-list-setting,
+    &.setting .text .link-style-setting,
+    &.setting:hover .text .link-style-setting {
+        display: flex;
+        align-items: center;
+        padding: 0 $dropdown-padding;
+        height: $dropdown-item-height;
+        border-radius: $border-radius-1;
+
+        &:hover {
+            background-color: #6288dd;
+        }
+    }
+
+    .icon {
+        width: 1lh;
+        height: 1lh;
+        fill: currentColor;
+    }
+
+    .icon.icon-setting {
+        display: none
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text:has(.link-list-setting, .link-style-setting) {
+        min-width: 100%;
+    }
+}

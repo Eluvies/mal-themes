@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+$base-url: 'https://eluvies.github.io/mal-themes/core/assets';
+$base-icons-url: '#{$base-url}/icons/';
+$base-logos-url: '#{$base-url}/logos/';
+
+// Icons
+
+$icon-size: 1em * math.div(16, 14);
+
+$icon-search-url: url('#{$base-icons-url}search.svg');
+$icon-chevron-right-url: url('#{$base-icons-url}chevron-right.svg');
+$icon-stats-url: url('#{$base-icons-url}stats.svg');
+$icon-filter-url: url('#{$base-icons-url}filter.svg');
+$icon-star-url: url('#{$base-icons-url}star.svg');
+$icon-chevron-down-url: url('#{$base-icons-url}chevron-down.svg');
+
+$icon-search-ratio: math.div(12, 16);
+$icon-chevron-right-ratio: math.div(6, 16);
+$icon-stats-ratio: math.div(11, 16);
+$icon-filter-ratio: math.div(12, 16);
+$icon-star-ratio: math.div(14, 16);
+$icon-chevron-down-ratio: math.div(10, 16);
+
+// Logos
+
+$mal-logo-mark-url: url('#{$base-logos-url}mal-logo-mark.svg');
+$mal-logo-mark-ratio: math.div(128, 59);

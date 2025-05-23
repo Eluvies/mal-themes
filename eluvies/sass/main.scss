@@ -1,0 +1,23 @@
+@use 'abstracts/index';
+@use '../../core/sass/base/reset-base';
+@use '../../core/sass/base/reset-mal';
+@use '../../core/sass/components/base-icons'; 
+@use 'base/base';
+
+
+// Layout-related sections
+@use 'layout/header';
+@use 'layout/list';
+@use 'layout/footer';
+
+// Components
+
+@use 'components/user-menu';
+@use 'components/cover-image';
+@use 'components/list-toolbar';
+@use 'components/stats';
+@use 'components/cards';
+
+@use 'themes/theme';
+
+@\import "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";

@@ -1,0 +1,1139 @@
+#advanced-options {
+    position: revert;
+    top: revert;
+    left: revert;
+    right: revert;
+    background-color: revert;
+    display: revert;
+    width: revert;
+    margin: 0;
+    padding: revert;
+    border: revert;
+    -moz-box-shadow: revert;
+    -webkit-box-shadow: revert;
+    -o-box-shadow: revert;
+    -ms-box-shadow: revert;
+    box-shadow: revert;
+    color: inherit;
+    text-align: revert;
+    font-family: revert;
+    z-index: revert;
+}
+
+#advanced-options .advanced-options-header {
+    width: revert;
+    margin: 0;
+    padding-bottom: revert;
+    border-bottom: revert;
+    font-size: revert;
+}
+
+#advanced-options .advanced-options-header .description {
+    font-size: revert;
+    font-weight: revert;
+    margin-left: revert;
+}
+
+#advanced-options select {
+    -ms-appearance: revert;
+    -webkit-appearance: revert;
+    -moz-appearance: revert;
+    appearance: revert;
+    background-image: revert;
+    background-repeat: revert;
+    background-position: revert;
+    background-size: revert;
+    background-color: revert;
+    display: revert;
+    height: revert;
+    padding: revert;
+    padding-right: revert;
+    border: revert;
+    border-radius: revert;
+    font-size: revert;
+}
+
+#advanced-options select::-ms-expand {
+    display: revert;
+}
+
+#advanced-options select:disabled {
+    background-image: revert;
+    color: inherit;
+}
+
+#advanced-options input[type=text] {
+    padding: revert;
+    border: revert;
+}
+
+#advanced-options input:focus {
+    outline: revert;
+}
+
+#advanced-options .sort-widget {
+    margin: 0;
+    padding: revert;
+    width: revert;
+}
+
+#advanced-options .sort-widget:last-of-type {
+    padding-bottom: revert;
+}
+
+#advanced-options .sort-widget select {
+    width: revert;
+    margin-right: revert;
+}
+
+#advanced-options .sort-widget input[type=radio] {
+    display: revert;
+}
+
+#advanced-options .sort-widget input[type=radio]+label {
+    background-color: revert;
+    display: revert;
+    width: revert;
+    padding: revert;
+    border: revert;
+    border-radius: revert;
+    color: inherit;
+    font-size: revert;
+    text-align: revert;
+    cursor: revert;
+}
+
+#advanced-options .sort-widget input[type=radio]:checked+label {
+    background-color: revert;
+    border: revert;
+    color: inherit;
+}
+
+#advanced-options .sort-widget input[type=radio]:disabled+label {
+    border: revert;
+    color: inherit;
+}
+
+#advanced-options .sort-widget input[type=radio]:checked:disabled+label {
+    background-color: revert;
+    border: revert;
+    color: inherit;
+}
+
+#advanced-options .filter-widget {
+    margin: 0;
+    padding: revert;
+    width: revert;
+}
+
+#advanced-options .filter-widget select {
+    margin-right: revert;
+    font-size: revert;
+}
+
+#advanced-options .filter-widget.title input[type=text] {
+    width: revert;
+}
+
+#advanced-options .filter-widget.airing-status select,
+#advanced-options .filter-widget.publishing-status select {
+    width: revert;
+}
+
+#advanced-options .filter-widget.producer select,
+#advanced-options .filter-widget.magazine select {
+    width: revert;
+}
+
+#advanced-options .filter-widget.aired-date select.year,
+#advanced-options .filter-widget.published-date select.year {
+    width: revert;
+}
+
+#advanced-options .filter-widget.aired-date select.month,
+#advanced-options .filter-widget.published-date select.month,
+#advanced-options .filter-widget.aired-date select.day,
+#advanced-options .filter-widget.published-date select.day {
+    width: revert;
+}
+
+#advanced-options .filter-widget.aired-date .text,
+#advanced-options .filter-widget.published-date .text {
+    display: revert;
+    margin-right: revert;
+    font-size: revert;
+}
+
+#advanced-options .filter-widget.aired-season select.year {
+    width: revert;
+}
+
+#advanced-options .filter-widget.aired-season select.season {
+    width: revert;
+}
+
+#advanced-options .sort-widget .widget-header,
+#advanced-options .filter-widget .widget-header {
+    display: revert;
+    width: revert;
+    font-size: revert;
+    font-family: revert;
+}
+
+#advanced-options .sort-widget:last-of-type,
+#advanced-options .filter-widget:last-of-type {
+    padding-bottom: revert;
+}
+
+#advanced-options .advanced-options-button {
+    width: revert;
+    margin: 0;
+    padding: revert;
+    border-top: revert;
+    text-align: revert;
+}
+
+#advanced-options .btn-apply,
+#advanced-options .btn-clear {
+    background-color: revert;
+    display: revert;
+    width: revert;
+    margin: 0;
+    padding: revert;
+    border-radius: revert;
+    font-size: revert;
+    color: inherit;
+    text-align: revert;
+    -moz-transition-property: revert;
+    -o-transition-property: revert;
+    -webkit-transition-property: revert;
+    transition-property: revert;
+    -moz-transition-duration: revert;
+    -o-transition-duration: revert;
+    -webkit-transition-duration: revert;
+    transition-duration: revert;
+    -moz-transition-timing-function: revert;
+    -o-transition-timing-function: revert;
+    -webkit-transition-timing-function: revert;
+    transition-timing-function: revert;
+}
+
+#advanced-options .btn-apply:hover,
+#advanced-options .btn-clear:hover {
+    background-color: revert;
+}
+
+
+body {
+    margin: 0;
+    text-align: revert;
+    font-family: revert;
+    font-size: revert;
+    /**/
+    line-height: 1;
+}
+
+td {
+    line-height: revert;
+}
+
+a {
+    color: inherit;
+    text-decoration: revert;
+}
+
+#footer-block {
+    padding: revert;
+    background-color: revert;
+    color: inherit;
+    font-family: revert;
+}
+
+#copyright {
+    font-size: revert;
+    color: inherit;
+    padding-top: revert;
+    text-align: revert;
+}
+
+#recaptcha-terms {
+    font-size: revert;
+    margin-top: revert;
+    color: inherit;
+}
+
+#recaptcha-terms a {
+    color: inherit;
+}
+
+#recaptcha-terms a:hover {
+    color: inherit;
+}
+
+/*
+.grecaptcha-badge {
+    visibility: revert;
+}
+*/
+
+.header a {
+    font-weight: revert;
+    color: inherit;
+}
+
+.header a:hover {
+    text-decoration: revert;
+}
+
+.header {
+    position: revert;
+    color: inherit;
+    display: revert;
+    width: revert;
+    height: revert;
+    margin: 0;
+}
+
+.header .header-title {
+    position: revert;
+    top: revert;
+    background-image: revert;
+    background-position: revert;
+    background-repeat: revert;
+    background-size: revert;
+    display: revert;
+    width: revert;
+    height: revert;
+    text-indent: revert;
+    overflow: revert;
+}
+
+.header .header-menu {
+    position: revert;
+    top: revert;
+    right: revert;
+    color: inherit;
+}
+
+.header .header-menu.other {
+    top: revert;
+}
+
+.header .header-menu .btn-menu {
+    display: revert;
+    color: inherit;
+    text-align: revert;
+    font-size: revert;
+}
+
+.header .header-menu .btn-menu>a {
+    color: inherit;
+}
+
+.header .username {
+    font-weight: revert;
+}
+
+.header .header-menu .list-menu {
+    position: revert;
+    top: revert;
+    right: revert;
+    background-color: revert;
+    display: revert;
+    border: revert;
+    -moz-box-shadow: revert;
+    -webkit-box-shadow: revert;
+    box-shadow: revert;
+    z-index: revert;
+}
+
+.header .header-menu .list-menu .icon-menu {
+    display: revert;
+    width: revert;
+    height: revert;
+    color: inherit;
+    font-size: revert;
+    font-weight: revert;
+    text-decoration: revert;
+    -moz-transition-property: revert;
+    -o-transition-property: revert;
+    -webkit-transition-property: revert;
+    transition-property: revert;
+    -moz-transition-duration: revert;
+    -o-transition-duration: revert;
+    -webkit-transition-duration: revert;
+    transition-duration: revert;
+    -moz-transition-timing-function: revert;
+    -o-transition-timing-function: revert;
+    -webkit-transition-timing-function: revert;
+    transition-timing-function: revert;
+}
+
+.header .header-info {
+    margin-top: revert;
+    margin-right: revert;
+    font-size: revert;
+    text-align: revert;
+    color: inherit;
+}
+
+.header .header-info>a {
+    color: inherit;
+}
+
+.header .header-menu .list-menu .icon-menu:hover {
+    background-color: revert;
+}
+
+.header .header-menu .list-menu .icon-menu svg.icon {
+    position: revert;
+    fill: revert;
+    left: revert;
+    top: revert;
+}
+
+.header .header-menu .list-menu .icon-menu .text {
+    position: revert;
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float {
+    position: revert;
+    display: revert;
+    top: revert;
+    width: revert;
+    border: revert;
+    z-index: revert;
+}
+
+.list-menu-float .icon-menu {
+    position: revert;
+    background-color: revert;
+    display: revert;
+    width: revert;
+    height: revert;
+    opacity: revert;
+    -moz-transition-property: revert;
+    -o-transition-property: revert;
+    -webkit-transition-property: revert;
+    transition-property: revert;
+    -moz-transition-duration: revert;
+    -o-transition-duration: revert;
+    -webkit-transition-duration: revert;
+    transition-duration: revert;
+    -moz-transition-timing-function: revert;
+    -o-transition-timing-function: revert;
+    -webkit-transition-timing-function: revert;
+    transition-timing-function: revert;
+}
+
+.list-menu-float .icon-menu svg.icon {
+    position: revert;
+    fill: revert;
+}
+
+.list-menu-float .icon-menu:hover svg.icon {
+    position: revert;
+    fill: revert;
+}
+
+.list-menu-float .icon-menu.profile {
+    background-size: revert;
+}
+
+.list-menu-float .icon-menu.quick-add svg.icon-quick-add {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.anime-list svg.icon-anime-list {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.manga-list svg.icon-manga-list {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.statistics svg.icon-statistics {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.history svg.icon-history {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.export svg.icon-export {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.login svg.icon-login {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.logout svg.icon-logout {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu.setting svg.icon-setting {
+    left: revert;
+    top: revert;
+}
+
+.list-menu-float .icon-menu .text {
+    position: revert;
+    top: revert;
+    left: revert;
+    width: revert;
+    display: revert;
+    color: inherit;
+    font-size: revert;
+    font-family: revert;
+    text-align: revert;
+    vertical-align: revert;
+    overflow: revert;
+    white-space: revert;
+    opacity: revert;
+    -moz-transition-property: revert;
+    -o-transition-property: revert;
+    -webkit-transition-property: revert;
+    transition-property: revert;
+    -moz-transition-duration: revert;
+    -o-transition-duration: revert;
+    -webkit-transition-duration: revert;
+    transition-duration: revert;
+    -moz-transition-timing-function: revert;
+    -o-transition-timing-function: revert;
+    -webkit-transition-timing-function: revert;
+    transition-timing-function: revert;
+}
+
+.list-menu-float .icon-menu:not(.profile):hover {
+    background-color: revert;
+    width: revert;
+}
+
+.list-menu-float .icon-menu:hover .text {
+    width: revert;
+    opacity: revert;
+}
+
+.list-menu-float .icon-menu.setting .text {
+    top: revert;
+    width: revert;
+    height: revert;
+    opacity: revert;
+    -moz-transition-property: revert;
+    -o-transition-property: revert;
+    -webkit-transition-property: revert;
+    transition-property: revert;
+    -moz-transition-duration: revert;
+    -o-transition-duration: revert;
+    -webkit-transition-duration: revert;
+    transition-duration: revert;
+    -moz-transition-timing-function: revert;
+    -o-transition-timing-function: revert;
+    -webkit-transition-timing-function: revert;
+    transition-timing-function: revert;
+}
+
+.list-menu-float .icon-menu.setting:hover .text {
+    top: revert;
+    width: revert;
+    height: revert;
+    opacity: revert;
+}
+
+.list-menu-float .icon-menu.setting .text .link-list-setting,
+.list-menu-float .icon-menu.setting .text .link-style-setting {
+    display: revert;
+    opacity: revert;
+}
+
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+    position: revert;
+    background-color: revert;
+    display: revert;
+    width: revert;
+    height: revert;
+    line-height: revert;
+    text-decoration: revert;
+    color: inherit;
+    opacity: revert;
+}
+
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting {
+    top: revert;
+}
+
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+    border-top: revert;
+    top: revert;
+}
+
+.list-container {
+    position: revert;
+    background-color: revert;
+    border: revert;
+    width: revert;
+    margin-bottom: revert;
+    margin-right: revert;
+    margin-left: revert;
+    text-align: revert;
+}
+
+.cover-block {
+    display: revert;
+    width: revert;
+    margin: 0;
+    text-align: revert;
+    vertical-align: revert;
+}
+
+.cover-block .image-container {
+    display: revert;
+    padding-top: revert;
+    width: revert;
+}
+
+.cover-block .image-container.hide {
+    display: revert;
+}
+
+.cover-block .image-container img {
+    max-width: revert;
+}
+
+.cover-block .image-container .btn-list-setting {
+    display: revert;
+}
+
+.cover-block .image-container:hover .btn-list-setting {
+    display: revert;
+    position: revert;
+    top: revert;
+    right: revert;
+    padding: revert;
+    border: revert;
+    font-size: revert;
+    color: inherit;
+    font-family: revert;
+}
+
+.cover-block .image-container .btn-list-setting:hover {
+    position: revert;
+    top: revert;
+    right: revert;
+    background-color: revert;
+    padding: revert;
+    border: revert;
+    -moz-box-shadow: revert;
+    -webkit-box-shadow: revert;
+    -o-box-shadow: revert;
+    -ms-box-shadow: revert;
+    box-shadow: revert;
+    font-size: revert;
+    color: inherit;
+    text-shadow: revert;
+}
+
+.cover-block .image-container .btn-list-setting .fa-camera {
+    font-size: revert;
+    -moz-text-shadow: revert;
+    -webkit-text-shadow: revert;
+    -o-text-shadow: revert;
+    -ms-text-shadow: revert;
+    text-shadow: revert;
+    -ms-filter: revert;
+}
+
+.cover-block .image-container .btn-list-setting .icon-plus-circle {
+    position: revert;
+    top: revert;
+    left: revert;
+    background-color: revert;
+    border-radius: revert;
+    -moz-box-shadow: revert;
+    -webkit-box-shadow: revert;
+    -o-box-shadow: revert;
+    -ms-box-shadow: revert;
+    box-shadow: revert;
+    font-size: revert;
+}
+
+.cover-block .image-container .btn-list-setting .text {
+    display: revert;
+}
+
+.cover-block .image-container .btn-list-setting:hover .text {
+    display: revert;
+    margin-left: revert;
+}
+
+.status-menu-container {
+    width: revert;
+    height: revert;
+    background-color: revert;
+    border-bottom: revert;
+    z-index: revert;
+}
+
+.status-menu-container.fixed {
+    position: revert;
+    display: revert;
+    top: revert;
+}
+
+.status-menu-container.fixed+div.list-block {
+    margin-top: revert;
+}
+
+.status-menu-container .status-menu {
+    display: revert;
+    margin: 0;
+    border-collapse: revert;
+    border-spacing: revert;
+}
+
+.status-menu-container .status-menu .status-button {
+    position: revert;
+    display: revert;
+    padding: revert;
+    margin: 0;
+    font-family: revert;
+    text-align: revert;
+    vertical-align: revert;
+    font-size: revert;
+    color: inherit;
+}
+
+.status-menu-container .status-menu .status-button.on {
+    color: inherit;
+    font-weight: revert;
+}
+
+.status-menu-container .status-menu .status-button:after {
+    position: revert;
+    bottom: revert;
+    left: revert;
+    background-color: revert;
+    display: revert;
+    width: revert;
+    height: revert;
+    content: revert;
+    opacity: revert;
+    -moz-transition-property: revert;
+    -o-transition-property: revert;
+    -webkit-transition-property: revert;
+    transition-property: revert;
+    -moz-transition-duration: revert;
+    -o-transition-duration: revert;
+    -webkit-transition-duration: revert;
+    transition-duration: revert;
+    -moz-transition-timing-function: revert;
+    -o-transition-timing-function: revert;
+    -webkit-transition-timing-function: revert;
+    transition-timing-function: revert;
+}
+
+.status-menu-container .status-menu .status-button.on:after,
+.status-menu .status-button:hover:after {
+    opacity: revert;
+}
+
+.status-menu-container .search-container {
+    position: revert;
+    right: revert;
+}
+
+.status-menu-container .search-container #search-button {
+    display: revert;
+    height: revert;
+    margin-top: revert;
+    color: inherit;
+    font-size: revert;
+    vertical-align: revert;
+}
+
+.status-menu-container .search-container #search-box {
+    display: revert;
+    width: revert;
+    height: revert;
+    overflow: revert;
+    margin-top: revert;
+    -webkit-transition: revert;
+    -moz-transition: revert;
+    transition: revert;
+    -webkit-backface-visibility: revert;
+    vertical-align: revert;
+}
+
+.status-menu-container .search-container #search-box.open {
+    display: revert;
+    width: revert;
+}
+
+.status-menu-container .search-container #search-box input {
+    width: revert;
+    height: revert;
+    box-sizing: border-box;
+}
+
+.list-block {
+    margin-top: revert;
+    min-height: revert;
+    padding: revert;
+}
+
+.list-unit {
+    display: revert;
+    margin: 0;
+    width: revert;
+}
+
+.list-unit .list-status-title {
+    position: revert;
+    display: revert;
+    background-color: revert;
+    width: revert;
+    height: revert;
+}
+
+.list-unit .list-status-title .text {
+    display: revert;
+    width: revert;
+    height: revert;
+    font-size: revert;
+    color: inherit;
+    font-weight: revert;
+    font-family: revert;
+    text-align: revert;
+    vertical-align: revert;
+}
+
+.list-unit .list-status-title .stats {
+    position: revert;
+    height: revert;
+    line-height: revert;
+    right: revert;
+}
+
+.list-unit .list-status-title .stats a {
+    margin-right: revert;
+    color: inherit;
+}
+
+.list-unit .list-status-title .stats a.filterd {
+    text-shadow: revert;
+}
+
+.list-unit .list-stats {
+    display: revert;
+    background-color: revert;
+    width: revert;
+    height: revert;
+    line-height: revert;
+    color: inherit;
+    text-align: revert;
+}
+
+.list-table {
+    width: revert;
+    margin: 0;
+    border: revert;
+    /**/
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.list-table>tbody:nth-of-type(2n+1) {
+    background-color: revert;
+}
+
+.list-table .list-table-header .header-title {
+    background: revert;
+    display: revert;
+    border-bottom: revert;
+    height: revert;
+    text-align: revert;
+    vertical-align: revert;
+}
+
+.list-table .list-table-header .header-title:last-child {
+    background-image: revert;
+}
+
+.list-table .list-table-header .header-title.status {
+    background-image: revert;
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.number {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.image {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.title {
+    padding-left: revert;
+    text-align: revert;
+}
+
+.list-table .list-table-header .header-title.score {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.type {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.progress {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.chapters {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.volumes {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.tags {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.rated {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.started {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.finished {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.days {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.storage {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.retail {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.priority {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title.popularity {
+    width: revert;
+}
+
+.list-table .list-table-header .header-title .link {
+    font-size: revert;
+    color: inherit;
+    text-decoration: revert;
+}
+
+.list-table .list-table-header .header-title .link.sort {
+    position: revert;
+    display: revert;
+    color: inherit;
+    white-space: revert;
+    -moz-transition-property: revert;
+    -o-transition-property: revert;
+    -webkit-transition-property: revert;
+    transition-property: revert;
+    -moz-transition-duration: revert;
+    -o-transition-duration: revert;
+    -webkit-transition-duration: revert;
+    transition-duration: revert;
+    -moz-transition-timing-function: revert;
+    -o-transition-timing-function: revert;
+    -webkit-transition-timing-function: revert;
+    transition-timing-function: revert;
+}
+
+.list-table .list-table-header .header-title .link.sort:hover {
+    color: inherit;
+}
+
+.list-table .list-table-header .header-title .sort-icon {
+    color: inherit;
+}
+
+.list-table .list-table-data .data {
+    display: revert;
+    padding: revert;
+    text-align: revert;
+    vertical-align: revert;
+    border-bottom: revert;
+}
+
+.list-table .list-table-data a:not(.edit-disabled):hover {
+    text-decoration: revert;
+}
+
+.list-table .list-table-data a.edit-disabled {
+    cursor: revert;
+    color: inherit;
+}
+
+.list-table .list-table-data .tags .edit {
+    display: revert;
+    width: revert;
+    text-align: revert;
+    color: inherit;
+    font-size: revert;
+    font-family: revert;
+}
+
+.list-table .list-table-data .tags .edit:hover {
+    color: inherit;
+}
+
+.list-table .list-table-data .tags textarea {
+    box-sizing: border-box;
+    width: revert;
+    height: revert;
+}
+
+.list-table .list-table-data .data.image a {
+    display: revert;
+}
+
+.list-table .list-table-data .data.image .image {
+    width: revert;
+    height: revert;
+    border: revert;
+}
+
+.list-table .list-table-data .data.title {
+    padding-left: revert;
+    text-align: revert;
+    word-wrap: revert;
+}
+
+.list-table .list-table-data .data.title .link {
+    font-size: revert;
+    font-weight: revert;
+}
+
+.list-table .list-table-data .data.title .rewatching,
+.list-table .list-table-data .data.title .rereading,
+.list-table .list-table-data .data.title .content-status {
+    color: inherit;
+    font-size: revert;
+}
+
+.list-table .list-table-data .data.score .link {
+    font-size: revert;
+    font-weight: revert;
+}
+
+.list-table .list-table-data .data.title .add-edit-more {
+    float: revert;
+    margin-right: revert;
+    font-size: revert;
+}
+
+.list-table .list-table-data .data.title .more {
+    position: revert;
+}
+
+.list-table .more-info {
+    display: revert;
+    border-bottom: revert;
+}
+
+.list-table .more-info .more-content {
+    padding: revert;
+}
+
+.list-table .list-table-data .data.tags {
+    word-wrap: revert;
+}
+
+.list-table .list-table-data .data.status {
+    width: revert;
+}
+
+.list-table .list-table-data .data.status .text {
+    display: revert;
+}
+
+.list-table .list-table-data .data.status.reading,
+.list-table .list-table-data .data.status.watching {
+    background-color: revert;
+}
+
+.list-table .list-table-data .data.status.plantoread,
+.list-table .list-table-data .data.status.plantowatch {
+    background-color: revert;
+}
+
+.list-table .list-table-data .data.status.completed {
+    background-color: revert;
+}
+
+.list-table .list-table-data .data.status.onhold {
+    background-color: revert;
+}
+
+.list-table .list-table-data .data.status.dropped {
+    background-color: revert;
+}
+
+.list-table .list-table-data .data.title {
+    padding-left: revert;
+    text-align: revert;
+}
+
+.list-table .list-table-data .data.title .notes {
+    width: revert;
+}
+
+.list-table .list-table-data .data.title .notes .text {
+    color: inherit;
+}
+
+.list-table .list-table-data .data.title .notes textarea {
+    width: revert;
+}
+
+.list-table .list-table-data .data.title .notes .edit {
+    color: inherit;
+    font-size: revert;
+}
+
+.list-unit .loading-space {
+    margin: 0;
+    height: revert;
+    font-size: revert;
+    text-align: revert;
+}
+
+.floatRightHeader {
+    float: revert;
+    font-weight: revert;
+    font-size: revert;
+    padding-right: revert;
+    margin-right: revert;
+}
+

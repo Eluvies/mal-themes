@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as *;
+
+.list-unit .list-stats {
+    display: none;
+    width: min(100%, $content-max-width);
+    background-color: #222222;
+    padding: $page-padding $space-4;
+    
+    /* More stats link */
+
+    span:last-child {
+        float: right;
+    }
+
+    .floatRightHeader {
+        display: flex;
+        gap: $icon-text-gap;
+    }
+}
+
+.status-menu-container.fixed + .list-block .list-unit .list-stats {
+    position: fixed;
+    top: $header-height + $list-toolbar-height;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}

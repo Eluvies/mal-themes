@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as *;
+
+body.ownlist .fa-solid {
+    line-height: 0;
+    vertical-align: middle;
+}
+
+/*
+ * 1. Get mask image
+ * 2. Get icon width
+ *    Icon width = icon size × aspect ratio
+ * 3. Put the icon as a mask
+ */
+
+#search-button,
+#show-stats-button,
+#advanced-options-button,
+.floatRightHeader {
+    >.fa-solid:before {
+        content: "";
+        display: block;
+        background-color: currentColor;
+        height: $icon-size;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+}
+
+#search-button>.fa-solid:before {
+    mask-image: $icon-search-url;
+    width: $icon-size * $icon-search-ratio;
+}
+
+#advanced-options-button>.fa-solid:before {
+    mask-image: $icon-filter-url;
+    width: $icon-size * $icon-filter-ratio;
+}
+
+#show-stats-button>.fa-solid:before {
+    mask-image: $icon-stats-url;
+    width: $icon-size * $icon-stats-ratio;
+}
+
+.floatRightHeader>.fa-solid:before {
+    mask-image: $icon-chevron-right-url;
+    width: $icon-size * $icon-chevron-right-ratio;
+}
