@@ -1,0 +1,22 @@
+:root {
+    
+    // Colors
+    --color-accent: #2E51A2;
+    --base-hue: 221;
+    --base-saturation: 56%;
+    --base-lightness: 41%;
+    --color-primary: var(--base-hue), var(--base-saturation), var(--base-lightness);
+    --color-background: var(--base-hue), 10%, 10%;
+    --color-surface-1: var(--base-hue), 10%, 40%;
+    --color-surface-2: var(--base-hue), 10%, 30%;
+    --color-surface-3: var(--base-hue), 10%, 25%;
+    --color-surface-4: var(--base-hue), 10%, 20%;
+    --color-surface-5: var(--base-hue), 10%, 15%;
+    --color-on-surface: var(--base-hue), 10%, 80%;
+    --color-on-surface-secondary: var(--base-hue), 10%, 70%;
+    --color-on-surface-hover: var(--base-hue), 40%, 80%;
+    
+    // Misc
+    --content-max-width: 1200px;
+    --list-max-columns: 6;
+}

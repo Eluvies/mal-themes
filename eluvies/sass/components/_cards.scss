@@ -1,9 +1,9 @@
 @use '../../../core/sass/abstracts/variables' as *;
-@use '../abstracts/variables' as *;
+@use '../abstracts/index' as *;
 
 .list-item {
     background-color: rgba(255, 255, 255, 0.06);
-    border-radius: $border-radius-2;
+    border-radius: $border-radius-md;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -74,18 +74,19 @@
 
     &.score .score-label {
         color: #f5c518;
+        display: flex;
+        align-items: center;
 
         &:before {
             content: '';
-            display: inline-block;
-            vertical-align: middle;
+            display: block;
             background-color: currentColor;
             mask-image: $icon-star-url;
             mask-repeat: no-repeat;
             mask-position: center calc(50% - 1px);
             height: $icon-size;
             width: $icon-size * $icon-star-ratio;
-            margin-right: 1ch;
+            margin-right: 0.2ch;
         }
     }
 }

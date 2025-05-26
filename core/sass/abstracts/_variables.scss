@@ -14,6 +14,8 @@ $icon-stats-url: url('#{$base-icons-url}stats.svg');
 $icon-filter-url: url('#{$base-icons-url}filter.svg');
 $icon-star-url: url('#{$base-icons-url}star.svg');
 $icon-chevron-down-url: url('#{$base-icons-url}chevron-down.svg');
+$icon-history-url: url('#{$base-icons-url}history.svg');
+$icon-logout-url: url('#{$base-icons-url}logout.svg');
 
 $icon-search-ratio: math.div(12, 16);
 $icon-chevron-right-ratio: math.div(6, 16);
@@ -21,6 +23,8 @@ $icon-stats-ratio: math.div(11, 16);
 $icon-filter-ratio: math.div(12, 16);
 $icon-star-ratio: math.div(14, 16);
 $icon-chevron-down-ratio: math.div(10, 16);
+$icon-history-ratio: math.div(15, 16);
+$icon-logout-ratio: math.div(11, 16);
 
 // Logos
 

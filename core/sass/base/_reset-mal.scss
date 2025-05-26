@@ -239,7 +239,8 @@ td {
 
 a {
     color: inherit;
-    text-decoration: revert;
+    /* */
+    text-decoration: none;
 }
 
 #footer-block {
@@ -282,7 +283,7 @@ a {
 }
 
 .header a:hover {
-    text-decoration: revert;
+    text-decoration: none;
 }
 
 .header {
@@ -354,7 +355,7 @@ a {
     color: inherit;
     font-size: revert;
     font-weight: revert;
-    text-decoration: revert;
+    text-decoration: none;
     -moz-transition-property: revert;
     -o-transition-property: revert;
     -webkit-transition-property: revert;
@@ -565,7 +566,7 @@ a {
     width: revert;
     height: revert;
     line-height: revert;
-    text-decoration: revert;
+    text-decoration: none;
     color: inherit;
     opacity: revert;
 }
@@ -948,7 +949,7 @@ a {
 .list-table .list-table-header .header-title .link {
     font-size: revert;
     color: inherit;
-    text-decoration: revert;
+    text-decoration: none;
 }
 
 .list-table .list-table-header .header-title .link.sort {
@@ -987,7 +988,8 @@ a {
 }
 
 .list-table .list-table-data a:not(.edit-disabled):hover {
-    text-decoration: revert;
+    /* */
+    text-decoration: none;
 }
 
 .list-table .list-table-data a.edit-disabled {

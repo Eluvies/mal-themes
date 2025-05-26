@@ -1,7 +1,10 @@
 @use '../abstracts/variables' as *;
 
 body.ownlist .fa-solid {
-    line-height: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    display: inline-block;
     vertical-align: middle;
 }
 
@@ -18,7 +21,7 @@ body.ownlist .fa-solid {
 .floatRightHeader {
     >.fa-solid:before {
         content: "";
-        display: block;
+        display: inline-block;
         background-color: currentColor;
         height: $icon-size;
         mask-repeat: no-repeat;

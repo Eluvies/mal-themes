@@ -1,5 +1,53 @@
+@use '../abstracts/index' as *;
+@use 'theme-variables' as *;
+
+body.ownlist:not(.classic-ownlist) {
+    background-color: hsl(var(--color-background)) !important;
+}
+
+// Header 
+
+.header:before {
+    background-color: hsl(var(--color-primary));
+}
+
+.list-menu-float {
+    background-color: hsl(var(--color-surface-4));
+}
+.list-menu-float .icon-menu {
+    &:not(.profile, .setting),
+    &.setting .text .link-list-setting,
+    &.setting:hover .text .link-list-setting,
+    &.setting .text .link-style-setting,
+    &.setting:hover .text .link-style-setting {
+        &:hover {
+            background-color: hsl(var(--color-surface-3));
+        }
+    }
+}
+
+.list-unit .list-stats {
+    color: hsl(var(--color-on-surface-secondary));
+    background-color: hsl(var(--color-surface-5));
+}
+
+.list-unit .list-stats .floatRightHeader:hover {
+    color: hsl(var(--color-on-surface-hover));
+}
+
+.status-menu-container {
+    background-color: hsl(var(--color-surface-4));
+}
+
+.list-block,
+footer {
+    background-color: hsl(var(--color-surface-5));
+}
+
 #recaptcha-terms {
+    color: hsl(var(--color-on-surface-secondary));
+    
     a:hover {
-        color: var(--color-accent);
+        color: hsl(var(--color-on-surface-hover));
     }
 }

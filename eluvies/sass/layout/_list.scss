@@ -11,8 +11,14 @@
 }
 
 .list-block {
-    background: #222222;
     position: relative;
+}
+
+.list-unit {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    padding: $space-4 $page-padding;
 }
 
 .list-table {
@@ -22,7 +28,6 @@
     justify-content: center;
     overflow: hidden;
     width: 100%;
-    padding: 0 $page-padding;
 
     @media (width < 801px) {
         grid-template-columns: repeat(4, minmax(0, 1fr));

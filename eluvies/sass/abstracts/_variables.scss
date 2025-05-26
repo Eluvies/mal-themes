@@ -5,9 +5,8 @@ $spacing: 0.25rem;
 // Layout
 
 $header-height: 12 * $spacing;
-$mal-logo-height: 20px;
+$header-logo-height: 5 * $spacing;
 $page-padding: 4 * $spacing;
-$footer-padding-y: 5 * $spacing;
 $content-max-width: 1200px;
 
 // List
@@ -19,11 +18,12 @@ $card-border-radius: 0.5rem;
 
 // Text
 
-$font-size-xl: 1.5rem;
-$font-size-lg: 1rem;
-$font-size-md: 0.875rem;
-$font-size-sm: 0.75rem;
 $font-size-xs: 0.625rem;
+$font-size-sm: 0.75rem;
+$font-size-md: 0.875rem;
+$font-size-lg: 1rem;
+$font-size-xl: 1.5rem;
+
 $text-color: #ffffff;
 
 // Spacing
@@ -45,9 +45,8 @@ $dropdown-border-radius: 0.375rem;
 
 $avatar-size: 32px;
 $icon-text-gap: 1ch;
-$cover-image-height: 256px;
 
-$border-radius-1: 1 * $spacing;
-$border-radius-2: 2 * $spacing;
-$border-radius-3: 3 * $spacing;
-$border-radius-4: 4 * $spacing;
+$border-radius-sm: 1 * $spacing;
+$border-radius-md: 2 * $spacing;
+$border-radius-lg: 3 * $spacing;
+$border-radius-full: 999rem;

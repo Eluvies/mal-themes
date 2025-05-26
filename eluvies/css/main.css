@@ -1,9 +1,4 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
-:root {
-  --color-accent: #2E51A2;
-}
-
 * {
   box-sizing: border-box;
   min-width: 0;
@@ -260,8 +255,8 @@ td {
 
 a {
   color: inherit;
-  -webkit-text-decoration: revert;
-          text-decoration: revert;
+  /* */
+  text-decoration: none;
 }
 
 #footer-block {
@@ -303,8 +298,7 @@ a {
 }
 
 .header a:hover {
-  -webkit-text-decoration: revert;
-          text-decoration: revert;
+  text-decoration: none;
 }
 
 .header {
@@ -374,8 +368,7 @@ a {
   color: inherit;
   font-size: revert;
   font-weight: revert;
-  -webkit-text-decoration: revert;
-          text-decoration: revert;
+  text-decoration: none;
   transition-property: revert;
   transition-duration: revert;
   transition-timing-function: revert;
@@ -550,8 +543,7 @@ a {
   width: revert;
   height: revert;
   line-height: revert;
-  -webkit-text-decoration: revert;
-          text-decoration: revert;
+  text-decoration: none;
   color: inherit;
   opacity: revert;
 }
@@ -919,8 +911,7 @@ a {
 .list-table .list-table-header .header-title .link {
   font-size: revert;
   color: inherit;
-  -webkit-text-decoration: revert;
-          text-decoration: revert;
+  text-decoration: none;
 }
 
 .list-table .list-table-header .header-title .link.sort {
@@ -950,8 +941,8 @@ a {
 }
 
 .list-table .list-table-data a:not(.edit-disabled):hover {
-  -webkit-text-decoration: revert;
-          text-decoration: revert;
+  /* */
+  text-decoration: none;
 }
 
 .list-table .list-table-data a.edit-disabled {
@@ -1102,7 +1093,10 @@ a {
 }
 
 body.ownlist .fa-solid {
-  line-height: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1117,7 +1111,7 @@ body.ownlist .fa-solid {
 #advanced-options-button > .fa-solid:before,
 .floatRightHeader > .fa-solid:before {
   content: "";
-  display: block;
+  display: inline-block;
   background-color: currentColor;
   height: 1.1428571429em;
   -webkit-mask-repeat: no-repeat;
@@ -1154,7 +1148,6 @@ body {
   position: relative;
   color: #ffffff;
   font-family: "Inter", sans-serif;
-  background-color: #141414 !important;
   font-size: 0.875rem;
   line-height: 1.5rem;
 }
@@ -1180,18 +1173,18 @@ body {
   display: block;
   width: 100%;
   height: 3rem;
-  background-color: #2E51A2;
   top: 0;
   left: 0;
 }
 
 .header .header-title {
+  line-height: 0;
   font-size: 0;
 }
 .header .header-title:before {
   content: "";
   display: block;
-  height: 20px;
+  height: 1.25rem;
   aspect-ratio: 128/59;
   background-color: white;
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/logos/mal-logo-mark.svg");
@@ -1205,7 +1198,8 @@ body {
   order: 1;
 }
 .header .header-menu:not(.other) {
-  margin-right: calc(1rem + 32px);
+  padding-right: 1rem;
+  margin-right: 32px;
 }
 
 #advanced-options {
@@ -1219,8 +1213,14 @@ body {
 }
 
 .list-block {
-  background: #222222;
   position: relative;
+}
+
+.list-unit {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1rem;
 }
 
 .list-table {
@@ -1230,7 +1230,6 @@ body {
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  padding: 0 1rem;
 }
 @media (width < 801px) {
   .list-table {
@@ -1258,7 +1257,6 @@ body {
 }
 
 footer {
-  background-color: #222222;
   margin-top: 0.75rem;
 }
 
@@ -1268,7 +1266,6 @@ footer {
   width: 100% !important;
   max-width: 1200px;
   margin: 0 auto;
-  line-height: 1.5;
 }
 
 #copyright {
@@ -1279,7 +1276,7 @@ footer {
 #recaptcha-terms {
   font-size: 0.625rem;
   line-height: 1rem;
-  color: darkgray;
+  font-weight: 500;
 }
 
 #copyright + #recaptcha-terms {
@@ -1288,16 +1285,16 @@ footer {
 
 .list-menu-float {
   position: fixed;
-  top: 3rem;
+  top: 3.25rem;
   z-index: 3;
-  background-color: #2E51A2;
   transition: all 0.5s ease-in-out;
   overflow: hidden;
   border-radius: 0.25rem;
   min-width: 192px;
   height: 0;
   right: max(0px, (100% - 1200px) / 2);
-  margin-right: 1rem;
+  margin-right: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 .list-menu-float:hover {
   height: 24rem;
@@ -1314,7 +1311,7 @@ footer {
   margin-right: 1rem;
   background-size: 0px;
   pointer-events: none;
-  height: 32px;
+  height: calc((32px + 3rem) / 2 + 0.25rem);
 }
 .list-menu-float .icon-menu.profile:before {
   content: "";
@@ -1352,15 +1349,7 @@ footer {
   height: 2.5rem;
   border-radius: 0.25rem;
 }
-.list-menu-float .icon-menu:not(.profile, .setting):hover, .list-menu-float .icon-menu.setting .text .link-list-setting:hover, .list-menu-float .icon-menu.setting:hover .text .link-list-setting:hover, .list-menu-float .icon-menu.setting .text .link-style-setting:hover, .list-menu-float .icon-menu.setting:hover .text .link-style-setting:hover {
-  background-color: #6288dd;
-}
 .list-menu-float .icon-menu .icon {
-  width: 1lh;
-  height: 1lh;
-  fill: currentColor;
-}
-.list-menu-float .icon-menu .icon.icon-setting {
   display: none;
 }
 .list-menu-float .icon-menu .text {
@@ -1371,12 +1360,16 @@ footer {
   min-width: 100%;
 }
 
+.cover-block {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 15/4;
+}
+
 .cover-block .image-container {
   position: relative;
-  overflow: hidden;
-  max-width: 1200px;
-  height: 256px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 .cover-block .image-container #cover-image {
   width: 100%;
@@ -1410,7 +1403,6 @@ footer {
   position: relative;
   z-index: 2;
   width: 100%;
-  background-color: #222222;
   max-width: 1200px;
   display: flex;
   padding: 0 1rem;
@@ -1557,16 +1549,17 @@ body.ownlist #list-container #status-menu .status-menu .status-button:hover {
 .list-unit .list-stats {
   display: none;
   width: min(100%, 1200px);
-  background-color: #222222;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   /* More stats link */
 }
-.list-unit .list-stats span:last-child {
-  float: right;
-}
 .list-unit .list-stats .floatRightHeader {
-  display: flex;
-  gap: 1ch;
+  text-transform: lowercase;
+}
+.list-unit .list-stats .floatRightHeader:before {
+  content: "...";
 }
 
 .status-menu-container.fixed + .list-block .list-unit .list-stats {
@@ -1643,11 +1636,12 @@ body.ownlist #list-container #status-menu .status-menu .status-button:hover {
 }
 .list-table .list-table-data .data.score .score-label {
   color: #f5c518;
+  display: flex;
+  align-items: center;
 }
 .list-table .list-table-data .data.score .score-label:before {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   background-color: currentColor;
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/star.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/star.svg");
@@ -1657,7 +1651,7 @@ body.ownlist #list-container #status-menu .status-menu .status-button:hover {
           mask-position: center calc(50% - 1px);
   height: 1.1428571429em;
   width: 1em;
-  margin-right: 1ch;
+  margin-right: 0.2ch;
 }
 
 #list-container .data.image,
@@ -1695,6 +1689,62 @@ body.ownlist #list-container #status-menu .status-menu .status-button:hover {
   padding: 0.5rem 1rem;
 }
 
+:root {
+  --color-accent: #2E51A2;
+  --base-hue: 221;
+  --base-saturation: 56%;
+  --base-lightness: 41%;
+  --color-primary: var(--base-hue), var(--base-saturation), var(--base-lightness);
+  --color-background: var(--base-hue), 10%, 10%;
+  --color-surface-1: var(--base-hue), 10%, 40%;
+  --color-surface-2: var(--base-hue), 10%, 30%;
+  --color-surface-3: var(--base-hue), 10%, 25%;
+  --color-surface-4: var(--base-hue), 10%, 20%;
+  --color-surface-5: var(--base-hue), 10%, 15%;
+  --color-on-surface: var(--base-hue), 10%, 80%;
+  --color-on-surface-secondary: var(--base-hue), 10%, 70%;
+  --color-on-surface-hover: var(--base-hue), 40%, 80%;
+  --content-max-width: 1200px;
+  --list-max-columns: 6;
+}
+
+body.ownlist:not(.classic-ownlist) {
+  background-color: hsl(var(--color-background)) !important;
+}
+
+.header:before {
+  background-color: hsl(var(--color-primary));
+}
+
+.list-menu-float {
+  background-color: hsl(var(--color-surface-4));
+}
+
+.list-menu-float .icon-menu:not(.profile, .setting):hover, .list-menu-float .icon-menu.setting .text .link-list-setting:hover, .list-menu-float .icon-menu.setting:hover .text .link-list-setting:hover, .list-menu-float .icon-menu.setting .text .link-style-setting:hover, .list-menu-float .icon-menu.setting:hover .text .link-style-setting:hover {
+  background-color: hsl(var(--color-surface-3));
+}
+
+.list-unit .list-stats {
+  color: hsl(var(--color-on-surface-secondary));
+  background-color: hsl(var(--color-surface-5));
+}
+
+.list-unit .list-stats .floatRightHeader:hover {
+  color: hsl(var(--color-on-surface-hover));
+}
+
+.status-menu-container {
+  background-color: hsl(var(--color-surface-4));
+}
+
+.list-block,
+footer {
+  background-color: hsl(var(--color-surface-5));
+}
+
+#recaptcha-terms {
+  color: hsl(var(--color-on-surface-secondary));
+}
 #recaptcha-terms a:hover {
-  color: var(--color-accent);
+  color: hsl(var(--color-on-surface-hover));
 }

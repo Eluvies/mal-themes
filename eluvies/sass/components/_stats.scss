@@ -1,20 +1,20 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/index' as *;
 
 .list-unit .list-stats {
     display: none;
     width: min(100%, $content-max-width);
-    background-color: #222222;
-    padding: $page-padding $space-4;
+    padding: $space-2 $page-padding;
+    text-align: center;
+    @include text-sm;
     
     /* More stats link */
 
-    span:last-child {
-        float: right;
-    }
-
     .floatRightHeader {
-        display: flex;
-        gap: $icon-text-gap;
+        text-transform: lowercase;
+        
+        &:before {
+            content: '...';
+        }
     }
 }
 

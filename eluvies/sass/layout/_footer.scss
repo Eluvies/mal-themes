@@ -1,8 +1,6 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts/index' as *;
 
 footer {
-    background-color: #222222;
     margin-top: $space-3;
 }
 
@@ -12,7 +10,6 @@ footer {
     width: 100% !important;
     max-width: $content-max-width;
     margin: 0 auto;
-    line-height: 1.5;
 }
 
 #copyright {
@@ -21,7 +18,6 @@ footer {
 
 #recaptcha-terms {
     @include text-xs;
-    color: darkgray;
 }
 
 #copyright + #recaptcha-terms {
