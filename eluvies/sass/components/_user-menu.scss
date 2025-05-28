@@ -51,12 +51,18 @@
 }
 
 .list-menu-float .icon-menu {
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-
-    &:not(.profile) {
+    &:not(.profile, .setting),
+    &.setting .text .link-list-setting,
+    &.setting:hover .text .link-list-setting,
+    &.setting .text .link-style-setting,
+    &.setting:hover .text .link-style-setting {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
         margin-inline: $dropdown-padding;
+        padding: 0 $dropdown-padding;
+        height: $dropdown-item-height;
+        border-radius: $border-radius-sm;
     }
 
     &.quick-add {
@@ -67,28 +73,7 @@
         margin-bottom: $dropdown-padding;
     }
 
-    &:not(.profile, .setting),
-    &.setting .text .link-list-setting,
-    &.setting:hover .text .link-list-setting,
-    &.setting .text .link-style-setting,
-    &.setting:hover .text .link-style-setting {
-        display: flex;
-        align-items: center;
-        padding: 0 $dropdown-padding;
-        height: $dropdown-item-height;
-        border-radius: $border-radius-sm;
-    }
-
     .icon {
         display: none;
-    }
-
-    .text {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .text:has(.link-list-setting, .link-style-setting) {
-        min-width: 100%;
     }
 }

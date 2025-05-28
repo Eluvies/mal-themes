@@ -1144,6 +1144,52 @@ body.ownlist .fa-solid {
   width: 0.4285714286em;
 }
 
+.list-menu-float .icon-menu:not(.profile, .setting):before,
+.list-menu-float .icon-menu.setting a:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.1428571429em;
+  aspect-ratio: 1/1;
+  -webkit-mask-size: auto 1.1428571429em;
+          mask-size: auto 1.1428571429em;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.list-menu-float .icon-menu.manga-list:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/manga-list.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/manga-list.svg");
+}
+
+.list-menu-float .icon-menu.anime-list:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/anime-list.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/anime-list.svg");
+}
+
+.list-menu-float .icon-menu.setting .link-list-setting:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/list-settings.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/list-settings.svg");
+}
+
+.list-menu-float .icon-menu.setting .link-style-setting:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/style-settings.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/style-settings.svg");
+}
+
+.list-menu-float .icon-menu.history:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/history.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/history.svg");
+}
+
+.list-menu-float .icon-menu.logout:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/logout.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/logout.svg");
+}
+
 body {
   position: relative;
   color: #ffffff;
@@ -1328,13 +1374,14 @@ footer {
   pointer-events: auto;
 }
 
-.list-menu-float .icon-menu {
+.list-menu-float .icon-menu:not(.profile, .setting), .list-menu-float .icon-menu.setting .text .link-list-setting, .list-menu-float .icon-menu.setting:hover .text .link-list-setting, .list-menu-float .icon-menu.setting .text .link-style-setting, .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
   display: flex;
   gap: 0.75rem;
-  align-items: flex-start;
-}
-.list-menu-float .icon-menu:not(.profile) {
+  align-items: center;
   margin-inline: 0.75rem;
+  padding: 0 0.75rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
 }
 .list-menu-float .icon-menu.quick-add {
   margin-top: 0.75rem;
@@ -1342,22 +1389,8 @@ footer {
 .list-menu-float .icon-menu.setting {
   margin-bottom: 0.75rem;
 }
-.list-menu-float .icon-menu:not(.profile, .setting), .list-menu-float .icon-menu.setting .text .link-list-setting, .list-menu-float .icon-menu.setting:hover .text .link-list-setting, .list-menu-float .icon-menu.setting .text .link-style-setting, .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
-  display: flex;
-  align-items: center;
-  padding: 0 0.75rem;
-  height: 2.5rem;
-  border-radius: 0.25rem;
-}
 .list-menu-float .icon-menu .icon {
   display: none;
-}
-.list-menu-float .icon-menu .text {
-  display: flex;
-  flex-direction: column;
-}
-.list-menu-float .icon-menu .text:has(.link-list-setting, .link-style-setting) {
-  min-width: 100%;
 }
 
 .cover-block {

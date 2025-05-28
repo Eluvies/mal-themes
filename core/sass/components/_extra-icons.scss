@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+.list-menu-float .icon-menu:not(.profile, .setting):before,
+.list-menu-float .icon-menu.setting a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: $icon-size;
+    aspect-ratio: 1 / 1;
+    mask-size: auto $icon-size;
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.list-menu-float .icon-menu.manga-list:before {
+    mask-image: $icon-manga-list-url;
+}
+
+.list-menu-float .icon-menu.anime-list:before {
+    mask-image: $icon-anime-list-url;
+}
+
+.list-menu-float .icon-menu.setting .link-list-setting:before {
+    mask-image: $icon-list-settings-url;
+}
+
+.list-menu-float .icon-menu.setting .link-style-setting:before {
+    mask-image: $icon-style-settings-url;
+}
+
+.list-menu-float .icon-menu.history:before {
+    mask-image: $icon-history-url;
+}
+
+.list-menu-float .icon-menu.logout:before {
+    mask-image: $icon-logout-url;
+}
