@@ -33,6 +33,10 @@
     mask-image: $icon-history-url;
 }
 
+.list-menu-float .icon-menu.export:before {
+    mask-image: $icon-export-url;
+}
+
 .list-menu-float .icon-menu.logout:before {
     mask-image: $icon-logout-url;
 }

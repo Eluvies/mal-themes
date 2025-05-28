@@ -22,6 +22,7 @@ $icon-history-url: url('#{$base-icons-url}history.svg');
 $icon-logout-url: url('#{$base-icons-url}logout.svg');
 $icon-list-settings-url: url('#{$base-icons-url}list-settings.svg');
 $icon-style-settings-url: url('#{$base-icons-url}style-settings.svg');
+$icon-export-url: url('#{$base-icons-url}export.svg');
 
 $icon-search-ratio: math.div(12, 16);
 $icon-chevron-right-ratio: math.div(6, 16);
@@ -29,14 +30,14 @@ $icon-stats-ratio: math.div(11, 16);
 $icon-filter-ratio: math.div(12, 16);
 $icon-star-ratio: math.div(14, 16);
 $icon-chevron-down-ratio: math.div(10, 16);
-$icon-history-ratio: math.div(15, 16);
-$icon-logout-ratio: math.div(11, 16);
 $icon-manga-list-ratio: math.div(12, 16);
-$icon-anime-list-ratio: math.div(14, 16);
-$icon-history-ratio:math.div(15, 16);
-$icon-logout-ratio:math.div(12, 16);
-$icon-list-settings-ratio:math.div(14, 16);
+$icon-anime-list-ratio: math.div(16, 16);
+$icon-history-ratio:math.div(16, 16);
+$icon-logout-ratio:math.div(14, 16);
+$icon-list-settings-ratio:math.div(16, 16);
 $icon-style-settings-ratio:math.div(12, 16);
+$icon-export-ratio: math.div(14, 16);
+
 
 // Logos
 

@@ -1185,6 +1185,11 @@ body.ownlist .fa-solid {
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/history.svg");
 }
 
+.list-menu-float .icon-menu.export:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/export.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/export.svg");
+}
+
 .list-menu-float .icon-menu.logout:before {
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/logout.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/logout.svg");
