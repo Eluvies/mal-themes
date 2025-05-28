@@ -10,8 +10,8 @@ body.ownlist .fa-solid {
 
 /*
  * 1. Get mask image
- * 2. Get icon width
- *    Icon width = icon size × aspect ratio
+ * 2. Get icon aspect-ratio
+ *    Icon aspect-ratio = icon size × aspect ratio
  * 3. Put the icon as a mask
  */
 
@@ -26,25 +26,26 @@ body.ownlist .fa-solid {
         height: $icon-size;
         mask-repeat: no-repeat;
         mask-position: center;
+        mask-size: auto 100%;
     }
 }
 
 #search-button>.fa-solid:before {
     mask-image: $icon-search-url;
-    width: $icon-size * $icon-search-ratio;
+    aspect-ratio: $icon-search-ratio;
 }
 
 #advanced-options-button>.fa-solid:before {
     mask-image: $icon-filter-url;
-    width: $icon-size * $icon-filter-ratio;
+    aspect-ratio: $icon-filter-ratio;
 }
 
 #show-stats-button>.fa-solid:before {
     mask-image: $icon-stats-url;
-    width: $icon-size * $icon-stats-ratio;
+    aspect-ratio: $icon-stats-ratio;
 }
 
 .floatRightHeader>.fa-solid:before {
     mask-image: $icon-chevron-right-url;
-    width: $icon-size * $icon-chevron-right-ratio;
+    aspect-ratio: $icon-chevron-right-ratio;
 }

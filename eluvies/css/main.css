@@ -1102,8 +1102,8 @@ body.ownlist .fa-solid {
 
 /*
  * 1. Get mask image
- * 2. Get icon width
- *    Icon width = icon size × aspect ratio
+ * 2. Get icon aspect-ratio
+ *    Icon aspect-ratio = icon size × aspect ratio
  * 3. Put the icon as a mask
  */
 #search-button > .fa-solid:before,
@@ -1118,30 +1118,32 @@ body.ownlist .fa-solid {
           mask-repeat: no-repeat;
   -webkit-mask-position: center;
           mask-position: center;
+  -webkit-mask-size: auto 100%;
+          mask-size: auto 100%;
 }
 
 #search-button > .fa-solid:before {
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/search.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/search.svg");
-  width: 0.8571428571em;
+  aspect-ratio: 0.75;
 }
 
 #advanced-options-button > .fa-solid:before {
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/filter.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/filter.svg");
-  width: 0.8571428571em;
+  aspect-ratio: 0.75;
 }
 
 #show-stats-button > .fa-solid:before {
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/stats.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/stats.svg");
-  width: 0.7857142857em;
+  aspect-ratio: 0.6875;
 }
 
 .floatRightHeader > .fa-solid:before {
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/chevron-right.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/chevron-right.svg");
-  width: 0.4285714286em;
+  aspect-ratio: 0.375;
 }
 
 .list-menu-float .icon-menu:not(.profile, .setting):before,
@@ -1151,8 +1153,8 @@ body.ownlist .fa-solid {
   vertical-align: middle;
   height: 1.1428571429em;
   aspect-ratio: 1/1;
-  -webkit-mask-size: auto 1.1428571429em;
-          mask-size: auto 1.1428571429em;
+  -webkit-mask-size: auto 100%;
+          mask-size: auto 100%;
   background-color: currentColor;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
@@ -1160,9 +1162,9 @@ body.ownlist .fa-solid {
           mask-position: center;
 }
 
-.list-menu-float .icon-menu.manga-list:before {
-  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/manga-list.svg");
-          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/manga-list.svg");
+.list-menu-float .icon-menu.quick-add:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/quick-add.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/quick-add.svg");
 }
 
 .list-menu-float .icon-menu.anime-list:before {
@@ -1170,14 +1172,14 @@ body.ownlist .fa-solid {
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/anime-list.svg");
 }
 
-.list-menu-float .icon-menu.setting .link-list-setting:before {
-  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/list-settings.svg");
-          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/list-settings.svg");
+.list-menu-float .icon-menu.manga-list:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/manga-list.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/manga-list.svg");
 }
 
-.list-menu-float .icon-menu.setting .link-style-setting:before {
-  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/style-settings.svg");
-          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/style-settings.svg");
+.list-menu-float .icon-menu.statistics:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/statistics.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/statistics.svg");
 }
 
 .list-menu-float .icon-menu.history:before {
@@ -1193,6 +1195,16 @@ body.ownlist .fa-solid {
 .list-menu-float .icon-menu.logout:before {
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/logout.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/logout.svg");
+}
+
+.list-menu-float .icon-menu.setting .link-list-setting:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/list-settings.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/list-settings.svg");
+}
+
+.list-menu-float .icon-menu.setting .link-style-setting:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/style-settings.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/style-settings.svg");
 }
 
 body {
