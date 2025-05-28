@@ -5,14 +5,10 @@
     position: fixed;
     top: $header-height + $space-1;
     z-index: 3;
-    transition: all 0.5s ease-in-out;
     overflow: hidden;
-    border-radius: $border-radius-sm;
     min-width: 192px;
-    height: 0;
     right: max(0px, (100% - $content-max-width) / 2);
     margin-right: $space-1;
-    box-shadow: 0 1px 3px rgba(0,0,0,.25);
 
     &:hover {
         height: 9 * $dropdown-item-height + 2 * $dropdown-padding;
@@ -56,21 +52,7 @@
     &.setting:hover .text .link-list-setting,
     &.setting .text .link-style-setting,
     &.setting:hover .text .link-style-setting {
-        display: flex;
         gap: 0.75rem;
-        align-items: center;
-        margin-inline: $dropdown-padding;
-        padding: 0 $dropdown-padding;
-        height: $dropdown-item-height;
-        border-radius: $border-radius-sm;
-    }
-
-    &.quick-add {
-        margin-top: $dropdown-padding;
-    }
-
-    &.setting {
-        margin-bottom: $dropdown-padding;
     }
 
     .icon {

@@ -10,25 +10,30 @@
     position: relative;
     width: 100%;
     height: 100%;
+}
 
-    #cover-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.cover-block .image-container #cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .btn-list-setting, .btn-list-setting:hover,
-    &:hover .btn-list-setting {
-        position: absolute;
-        top: $space-4;
-        right: $page-padding;
-        opacity: 0;
-        transition: all .25s ease-in-out;
-    }
+.cover-block .image-container .btn-list-setting, .btn-list-setting:hover,
+.cover-block .image-container:hover .btn-list-setting {
+    position: absolute;
+    bottom: $space-4;
+    right: $page-padding;
+    opacity: 0;
+    transition: all .25s ease-in-out;
+}
 
-    &:hover {
-        .btn-list-setting {
-            opacity: 1;
-        }
+.cover-block .image-container:hover .btn-list-setting {
+    opacity: 1;
+    
+    .fa-solid, .text {
+        display: none;
     }
+    
+    border-radius: $border-radius-full;
+    padding: $space-4;
 }

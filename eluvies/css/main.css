@@ -1207,6 +1207,11 @@ body.ownlist .fa-solid {
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/style-settings.svg");
 }
 
+.cover-block .image-container .btn-list-setting:before {
+  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/change-profile-cover.svg");
+          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/change-profile-cover.svg");
+}
+
 body {
   position: relative;
   color: #ffffff;
@@ -1248,7 +1253,7 @@ body {
   content: "";
   display: block;
   height: 1.25rem;
-  aspect-ratio: 128/59;
+  aspect-ratio: 2.1694915254;
   background-color: white;
   -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/logos/mal-logo-mark.svg");
           mask-image: url("https://eluvies.github.io/mal-themes/core/assets/logos/mal-logo-mark.svg");
@@ -1350,14 +1355,10 @@ footer {
   position: fixed;
   top: 3.25rem;
   z-index: 3;
-  transition: all 0.5s ease-in-out;
   overflow: hidden;
-  border-radius: 0.25rem;
   min-width: 192px;
-  height: 0;
   right: max(0px, (100% - 1200px) / 2);
   margin-right: 0.25rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 .list-menu-float:hover {
   height: 24rem;
@@ -1392,19 +1393,7 @@ footer {
 }
 
 .list-menu-float .icon-menu:not(.profile, .setting), .list-menu-float .icon-menu.setting .text .link-list-setting, .list-menu-float .icon-menu.setting:hover .text .link-list-setting, .list-menu-float .icon-menu.setting .text .link-style-setting, .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
-  display: flex;
   gap: 0.75rem;
-  align-items: center;
-  margin-inline: 0.75rem;
-  padding: 0 0.75rem;
-  height: 2.5rem;
-  border-radius: 0.25rem;
-}
-.list-menu-float .icon-menu.quick-add {
-  margin-top: 0.75rem;
-}
-.list-menu-float .icon-menu.setting {
-  margin-bottom: 0.75rem;
 }
 .list-menu-float .icon-menu .icon {
   display: none;
@@ -1421,21 +1410,30 @@ footer {
   width: 100%;
   height: 100%;
 }
+
 .cover-block .image-container #cover-image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cover-block .image-container .btn-list-setting, .cover-block .image-container .btn-list-setting:hover, .cover-block .image-container:hover .btn-list-setting {
+
+.cover-block .image-container .btn-list-setting, .btn-list-setting:hover,
+.cover-block .image-container:hover .btn-list-setting {
   position: absolute;
-  top: 1rem;
+  bottom: 1rem;
   right: 1rem;
   opacity: 0;
   transition: all 0.25s ease-in-out;
 }
+
 .cover-block .image-container:hover .btn-list-setting {
   opacity: 1;
+  border-radius: 999rem;
+  padding: 1rem;
+}
+.cover-block .image-container:hover .btn-list-setting .fa-solid, .cover-block .image-container:hover .btn-list-setting .text {
+  display: none;
 }
 
 .status-menu-container,
@@ -1455,7 +1453,6 @@ footer {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  padding: 0 1rem;
 }
 
 .status-menu-container.fixed {
@@ -1467,14 +1464,11 @@ footer {
 }
 
 .status-menu-container .status-menu {
-  background-color: rgb(47, 47, 47);
-  height: 0;
   overflow: hidden;
-  border-radius: 0.25rem;
-  margin-top: 3rem;
-  transition: all 0.5s ease-in-out;
+  margin-top: 3.25rem;
   width: -moz-fit-content;
   width: fit-content;
+  margin-left: 0.25rem;
 }
 .status-menu-container .status-menu:before, .status-menu-container .status-menu:after {
   content: var(--current-status);
@@ -1483,6 +1477,7 @@ footer {
   position: absolute;
   cursor: pointer;
   padding-right: calc(0.7142857143em + 1ch);
+  margin-left: 0.75rem;
 }
 .status-menu-container .status-menu:has(.all_anime.on) {
   --current-status: "All Anime";
@@ -1575,25 +1570,8 @@ footer {
   right: max(0px, (100% - 1200px) / 2);
 }
 
-body.ownlist #list-container #status-menu .status-menu:hover:not(:has(.search-container:hover)) {
+.status-menu-container .status-menu:hover:not(:has(.search-container:hover)) {
   height: 16.5rem;
-}
-body.ownlist #list-container #status-menu .status-menu .status-button {
-  border-radius: 0.375rem;
-  padding-inline: 0.75rem;
-  margin-inline: 0.75rem;
-  display: flex;
-  align-items: center;
-  height: 2.5rem;
-}
-body.ownlist #list-container #status-menu .status-menu .status-button.all_anime {
-  margin-top: 0.75rem;
-}
-body.ownlist #list-container #status-menu .status-menu .status-button.plantowatch {
-  margin-bottom: 0.75rem;
-}
-body.ownlist #list-container #status-menu .status-menu .status-button:hover {
-  background-color: rgb(66, 66, 66);
 }
 
 .list-unit .list-stats {
@@ -1758,6 +1736,38 @@ body.ownlist #list-container #status-menu .status-menu .status-button:hover {
   --list-max-columns: 6;
 }
 
+.status-menu-container .status-menu,
+.list-menu-float {
+  height: 0;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.status-menu-container .status-menu .status-button,
+.list-menu-float .icon-menu:not(.profile, .setting),
+.list-menu-float .icon-menu.setting .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting .text .link-style-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+  border-radius: 0.25rem;
+  padding-inline: 0.75rem;
+  margin-inline: 0.75rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.status-menu-container .status-menu .status-button.all_anime,
+.list-menu-float .icon-menu.quick-add {
+  margin-top: 0.75rem;
+}
+
+.status-menu-container .status-menu .status-button.plantowatch,
+.list-menu-float .icon-menu.setting {
+  margin-bottom: 0.75rem;
+}
+
 body.ownlist:not(.classic-ownlist) {
   background-color: hsl(var(--color-background)) !important;
 }
@@ -1766,11 +1776,17 @@ body.ownlist:not(.classic-ownlist) {
   background-color: hsl(var(--color-primary));
 }
 
-.list-menu-float {
+.list-menu-float,
+.status-menu-container .status-menu {
   background-color: hsl(var(--color-surface-4));
 }
 
-.list-menu-float .icon-menu:not(.profile, .setting):hover, .list-menu-float .icon-menu.setting .text .link-list-setting:hover, .list-menu-float .icon-menu.setting:hover .text .link-list-setting:hover, .list-menu-float .icon-menu.setting .text .link-style-setting:hover, .list-menu-float .icon-menu.setting:hover .text .link-style-setting:hover {
+.list-menu-float .icon-menu:not(.profile, .setting):hover,
+.list-menu-float .icon-menu.setting .text .link-list-setting:hover,
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting:hover,
+.list-menu-float .icon-menu.setting .text .link-style-setting:hover,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting:hover,
+.status-menu-container .status-menu .status-button:hover {
   background-color: hsl(var(--color-surface-3));
 }
 

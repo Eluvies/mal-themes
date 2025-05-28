@@ -11,18 +11,19 @@ body.ownlist:not(.classic-ownlist) {
     background-color: hsl(var(--color-primary));
 }
 
-.list-menu-float {
+.list-menu-float,
+.status-menu-container .status-menu {
     background-color: hsl(var(--color-surface-4));
 }
-.list-menu-float .icon-menu {
-    &:not(.profile, .setting),
-    &.setting .text .link-list-setting,
-    &.setting:hover .text .link-list-setting,
-    &.setting .text .link-style-setting,
-    &.setting:hover .text .link-style-setting {
-        &:hover {
-            background-color: hsl(var(--color-surface-3));
-        }
+
+.list-menu-float .icon-menu:not(.profile, .setting),
+.list-menu-float .icon-menu.setting .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting .text .link-style-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting,
+.status-menu-container .status-menu .status-button {
+    &:hover {
+        background-color: hsl(var(--color-surface-3));
     }
 }
 
