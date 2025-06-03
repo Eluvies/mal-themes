@@ -1,25 +1,94 @@
+@use 'variables' as *;
+@use 'functions' as *;
+
+@mixin avatar-image {
+	display: block;
+	width: $avatar-size;
+	aspect-ratio: 1 / 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+}
+
+// Dropdown-related mixins
+
+@mixin dropdown-container {
+	display: block;
+	height: 0;
+	transition: height 0.25s ease-in-out;
+	border-radius: $border-radius-lg;
+	overflow: hidden;
+	width: fit-content;
+}
+
+@mixin dropdown-container--hover($vertical-position: null, $height: 0) {
+	height: $height;
+	
+	@if $vertical-position {
+		overflow-y: auto;
+		max-height: calc(100vh - $vertical-position);
+	}
+}
+
+@mixin dropdown-item($margin: $space-3) {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	border-radius: $border-radius-sm;
+	padding-inline: $space-2;
+	margin-inline: $margin;
+	height: $dropdown-item-height;
+}
+
+@mixin dropdown-item--first($margin: $space-3) {
+	margin-top: $margin;
+}
+
+@mixin dropdown-item--last($margin: $space-3) {
+	margin-bottom: $margin;
+}
+
+@mixin dropdown-item-with-separator($margin: calc($space-4 + 1px)) {
+	position: relative;
+	margin-top: $margin;
+	
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		top: calc(-1 * $space-2);
+		transform: translateY(-100%);
+		left: 0;
+	}
+}
+
+// Typography-related mixins
+
 @mixin text-xl {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
 }
 
 @mixin text-lg {
-  font-size: 1rem;
-  line-height: 1.75rem;
+	font-size: 1rem;
+	line-height: 1.75rem;
 }
 
 @mixin text-md {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
 }
 
 @mixin text-sm {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
+	font-size: 0.75rem;
+	line-height: 1.25rem;
 }
 
 @mixin text-xs {
-  font-size: 0.625rem;
-  line-height: 1rem;
-  font-weight: 500;
+	font-size: 0.625rem;
+	line-height: 1rem;
+	font-weight: 500;
 }

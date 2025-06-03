@@ -12,12 +12,11 @@
 @use 'layout/footer';
 
 // Components
-
+@use 'components/dropdown';
 @use 'components/user-menu';
 @use 'components/cover-image';
 @use 'components/list-toolbar';
 @use 'components/stats';
 @use 'components/cards';
-@use 'components/dropdown';
 
 @use 'themes/theme';

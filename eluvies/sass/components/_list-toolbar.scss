@@ -16,63 +16,60 @@
 // List toolbar | Status menu
 
 .status-menu-container {
-    position: relative;
+    position: sticky;
     z-index: 2;
     width: 100%;
     max-width: $content-max-width;
     display: flex;
+    top: $header-height;
 }
 
 .status-menu-container.fixed {
-    position: fixed;
+    display: flex;
+    position: sticky;
     top: $header-height;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
 }
 
 .status-menu-container .status-menu {
-    overflow: hidden;
     margin-top: $list-toolbar-height + $space-1;
-    width: fit-content;
     margin-left: $space-1;
     
-    &:before,
-    &:after {
+    .status-button:before,
+    .status-button:after {
         content: var(--current-status);
         color: $text-color;
         top: calc(($list-toolbar-height - 1lh) / 2);
         position: absolute;
         cursor: pointer;
         padding-right: calc(core.$icon-size * core.$icon-chevron-down-ratio + $icon-text-gap); 
-        margin-left: $page-padding - $space-1;
+        left: $page-padding;
     }
     
-    &:has(.all_anime.on) {
+    .status-button.all_anime.on {
         --current-status: "All Anime";
     }
 
-    &:has(.watching.on) {
+    .status-button.watching.on {
         --current-status: "Currently Watching";
     }
 
-    &:has(.completed.on) {
+    .status-button.completed.on {
         --current-status: "Completed";
     }
 
-    &:has(.onhold.on) {
+    .status-button.onhold.on {
         --current-status: "On Hold";
     }
 
-    &:has(.dropped.on) {
+    .status-button.dropped.on {
         --current-status: "Dropped";
     }
 
-    &:has(.plantowatch.on) {
+    .status-button.plantowatch.on {
         --current-status: "Plan to Watch";
     }
 
-    &:after {
+    .status-button:after {
         background-color: currentColor;
         mask-image: core.$icon-chevron-down-url;
         mask-repeat: no-repeat;
@@ -80,13 +77,8 @@
         mask-size: auto core.$icon-size;
     }
 
-    &:hover:not(:has(.search-container:hover)) {
-        &:before,
-        &:after {
-            --text-color: rgba(255, 255, 255, .5);
-        }
-        
-        &:before{
+    &:hover:not(:has(.search-container:hover)) {        
+        .status-button:before{
             height: calc(($list-toolbar-height + 1lh) / 2);
         }
     }
@@ -130,10 +122,11 @@
 // Filters | Stats
     
 #list-container .list-status-title {
-    position: absolute;
-    top: $list-toolbar-height * -1;
-    right: 0;
+    position: sticky;
+    top: $header-height;
     z-index: 2;
+    align-self: flex-end;
+    margin-top: $list-toolbar-height * -1;
     
     .text {
         display: none;
@@ -151,22 +144,6 @@
     #advanced-options-button {
         &:hover {
             background-color: rgba(255, 255, 255, .1);
-        }
-    }
-}
-
-#status-menu.fixed + .list-block .list-status-title {
-    position: fixed;
-    top: $header-height;
-    right: max(0px, (100% - $content-max-width) / 2);
-}
-
-// Status dropdown
-
-.status-menu-container .status-menu {
-    &:hover {
-        &:not(:has(.search-container:hover)) {
-            height: 6 * $dropdown-item-height + 2 * $dropdown-padding;
         }
     }
 }

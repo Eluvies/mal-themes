@@ -11,21 +11,74 @@ body.ownlist:not(.classic-ownlist) {
     background-color: hsl(var(--color-primary));
 }
 
-.list-menu-float,
-.status-menu-container .status-menu {
+
+// User menu
+
+.list-menu-float {
     background-color: hsl(var(--color-surface-4));
 }
+
+.list-menu-float .icon-menu.quick-add:after,
+.list-menu-float .icon-menu.statistics:after,
+.list-menu-float .icon-menu.setting .text .link-list-setting:after,
+.list-menu-float .icon-menu.export:after,
+.list-menu-float .icon-menu.logout:after {
+    border-bottom-color: hsl(var(--color-surface-1));
+}
+
+// User menu dropdown item hover
 
 .list-menu-float .icon-menu:not(.profile, .setting),
 .list-menu-float .icon-menu.setting .text .link-list-setting,
 .list-menu-float .icon-menu.setting:hover .text .link-list-setting,
 .list-menu-float .icon-menu.setting .text .link-style-setting,
-.list-menu-float .icon-menu.setting:hover .text .link-style-setting,
-.status-menu-container .status-menu .status-button {
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
     &:hover {
         background-color: hsl(var(--color-surface-3));
     }
 }
+
+// Status dropdown
+
+.status-menu-container .status-menu {
+    background-color: hsl(var(--color-surface-4));
+}
+
+// Status dropdown item hover
+
+.status-menu-container .status-menu .status-button:hover {
+    background-color: hsl(var(--color-surface-3));
+}
+
+// Sort dropdown
+
+.list-table-header {
+    background-color: hsl(var(--color-surface-4));
+}
+
+// Sort dropdown item hover
+
+.list-table-header .header-title:hover {
+    background-color: hsl(var(--color-surface-3));
+}
+
+// List
+
+.list-block {
+    background-color: hsl(var(--color-surface-5));
+}
+
+// List cover image
+
+.cover-block .image-container .btn-list-setting {
+    background-color: hsl(var(--color-surface-4));
+}
+
+.cover-block .image-container .btn-list-setting:hover {
+    background-color: hsl(var(--color-surface-3));
+}
+
+// List Toolbar
 
 .list-unit .list-stats {
     color: hsl(var(--color-on-surface-secondary));
@@ -40,7 +93,8 @@ body.ownlist:not(.classic-ownlist) {
     background-color: hsl(var(--color-surface-4));
 }
 
-.list-block,
+// Footer
+
 footer {
     background-color: hsl(var(--color-surface-5));
 }

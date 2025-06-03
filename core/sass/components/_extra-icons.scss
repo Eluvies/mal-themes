@@ -1,7 +1,8 @@
 @use '../abstracts/variables' as *;
 
 .list-menu-float .icon-menu:not(.profile, .setting):before,
-.list-menu-float .icon-menu.setting a:before {
+.list-menu-float .icon-menu.setting a:before,
+.cover-block .image-container .btn-list-setting:before {
     content: '';
     display: inline-block;
     vertical-align: middle;

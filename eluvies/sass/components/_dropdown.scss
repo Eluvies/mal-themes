@@ -1,34 +1,94 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/index' as *;
 @use '../themes/theme-variables' as *;
 
-.status-menu-container .status-menu,
+// User menu dropdown
+
 .list-menu-float {
-    height: 0;
-    transition: all 0.5s ease-in-out;
-    border-radius: $border-radius-sm;
-    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    margin: $space-1 $space-1 0 0;
+    @include dropdown-container;
+    width: 256px;
 }
 
-.status-menu-container .status-menu .status-button,
-.list-menu-float .icon-menu:not(.profile, .setting),
+.list-menu-float:hover {
+    @include dropdown-container--hover($vertical-position: calc($header-height + $space-1), $height: 115.25 * $space-1);
+}
+
+.list-menu-float .icon-menu.profile {
+    margin: $space-4 + $space-2;
+}
+
+.list-menu-float .icon-menu:not(.profile,.setting),
 .list-menu-float .icon-menu.setting .text .link-list-setting,
 .list-menu-float .icon-menu.setting:hover .text .link-list-setting,
 .list-menu-float .icon-menu.setting .text .link-style-setting,
 .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
-    border-radius: $border-radius-sm;
-    padding-inline: $space-3;
-    margin-inline: $dropdown-padding;
-    height: $dropdown-item-height;
-    display: flex;
-    align-items: center;
+    @include dropdown-item($space-4);
 }
 
-.status-menu-container .status-menu .status-button.all_anime,
+.list-menu-float .icon-menu.statistics,
+.list-menu-float .icon-menu.setting .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.export {
+    @include dropdown-item-with-separator;
+}
+
 .list-menu-float .icon-menu.quick-add {
-    margin-top: $dropdown-padding;
+    @include dropdown-item-with-separator(calc($space-2 + 1px));
 }
 
-.status-menu-container .status-menu .status-button.plantowatch,
-.list-menu-float .icon-menu.setting {
-    margin-bottom: $dropdown-padding;
+.list-menu-float .icon-menu.logout {
+    @include dropdown-item-with-separator;
+    @include dropdown-item--last($space-4);
+}
+
+// Status dropdown
+
+.status-menu-container .status-menu {
+    @include dropdown-container;
+}
+
+.status-menu-container .status-menu:hover:not(:has(.search-container:hover)) {
+    @include dropdown-container--hover($height: 54 * $space-1);
+}
+
+.status-menu-container.fixed .status-menu:hover:not(:has(.search-container:hover)) {
+    @include dropdown-container--hover(calc($header-height + $list-toolbar-height + $space-1), $height: 54 * $space-1);
+}
+
+.status-menu-container .status-menu .status-button {
+    @include dropdown-item;
+}
+
+.status-menu-container .status-menu .status-button:first-of-type {
+    @include dropdown-item--first;
+}
+
+.status-menu-container .status-menu .status-button:last-of-type {
+    @include dropdown-item--last;
+}
+
+// Sort dropdown
+
+.list-table-header {
+    @include dropdown-container;
+}
+
+.list-table-header:hover {
+    @include dropdown-container--hover(0px, 0);
+}
+
+#list-container .header-title {
+    @include dropdown-item;
+}
+
+#list-container .header-title:not(:has(>.link.sort)) {
+    display: none;
+}
+
+#list-container .header-title:has(>.link.sort):not(.header-title:has(>.link.sort) ~ .header-title:has(>.link.sort)) {
+    @include dropdown-item--first;
+}
+
+#list-container .header-title:has(.link.sort):not(:has(~.header-title)){
+    @include dropdown-item--last;
 }
