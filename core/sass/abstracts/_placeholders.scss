@@ -1,0 +1,19 @@
+
+@use 'variables' as *;
+
+%icon {
+    content: "";
+    display: inline-flex;
+    line-height: inherit;
+    vertical-align: top;
+    background-color: currentColor;
+    height: $icon-size;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: auto 100%;
+    margin-block: calc((1lh - $icon-size) / 2);
+}
+
+%hidden {
+    display: none;
+}

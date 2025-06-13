@@ -1,5 +1,2 @@
 @use 'variables' as *;
 
-@function dropdown-height($items-count, $item-height, $vertical-spacing) {
-    @return $items-count * $item-height + $vertical-spacing;
-}

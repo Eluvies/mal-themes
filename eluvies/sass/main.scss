@@ -1,8 +1,9 @@
-@use 'abstracts/index';
 @use '../../core/sass/base/reset-base';
 @use '../../core/sass/base/reset-mal';
 @use '../../core/sass/components/base-icons'; 
 @use '../../core/sass/components/extra-icons';
+@use 'themes/theme-variables';
+@use 'abstracts/index';
 @use 'base/base';
 
 
@@ -13,7 +14,6 @@
 
 // Components
 @use 'components/dropdown';
-@use 'components/user-menu';
 @use 'components/cover-image';
 @use 'components/list-toolbar';
 @use 'components/stats';

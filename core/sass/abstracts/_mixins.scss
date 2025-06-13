@@ -1,0 +1,7 @@
+@use 'placeholders' as *;
+
+@mixin icon($icon-url: none, $icon-ratio: 1) {
+    @extend %icon;
+    mask-image: $icon-url;
+    aspect-ratio: $icon-ratio;
+}

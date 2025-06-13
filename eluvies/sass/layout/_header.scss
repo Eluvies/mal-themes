@@ -33,6 +33,7 @@
 .header .header-title {
     line-height: 0;
     font-size: 0;
+    min-width: fit-content;
 
     &:before {
         content: '';
@@ -46,13 +47,23 @@
     }
 }
 
-// Header text
+// Header-menu
 
 .header .header-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
     order: 1;
-
-    &:not(.other) {
-        padding-right: $space-4;
-        margin-right: $avatar-size;
-    }
+    margin-right: $avatar-size + $space-4;
 }
+
+// Header avatar
+
+.list-menu-float,
+.header .header-info  {
+    position: fixed;
+    top: $header-height;
+    right: max(0px, (100vw - $content-max-width) / 2);
+    z-index: 3;
+}
+

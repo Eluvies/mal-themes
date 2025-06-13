@@ -1,56 +1,51 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/index' as *;
 
-.list-menu-float .icon-menu:not(.profile, .setting):before,
-.list-menu-float .icon-menu.setting a:before,
-.cover-block .image-container .btn-list-setting:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: $icon-size;
-    aspect-ratio: 1 / 1;
-    mask-size: auto 100%;
-    background-color: currentColor;
-    mask-repeat: no-repeat;
-    mask-position: center;
+.fa-solid.fa-camera,
+.icon-menu .icon {
+    @extend %hidden;  
 }
 
-.list-menu-float .icon-menu.quick-add:before {
-    mask-image: $icon-quick-add-url;
+.icon-menu.quick-add:before {
+    @include icon($icon-quick-add-url);
 }
 
-.list-menu-float .icon-menu.anime-list:before {
-    mask-image: $icon-anime-list-url;
+.icon-menu.anime-list:before {
+    @include icon($icon-anime-list-url);
 }
 
-.list-menu-float .icon-menu.manga-list:before {
-    mask-image: $icon-manga-list-url;
+.icon-menu.manga-list:before {
+    @include icon($icon-manga-list-url);
 }
 
-.list-menu-float .icon-menu.statistics:before {
-    mask-image: $icon-statistics-url;
+.icon-menu.statistics:before {
+    @include icon($icon-statistics-url);
 }
 
-.list-menu-float .icon-menu.history:before {
-    mask-image: $icon-history-url;
+.icon-menu.history:before {
+    @include icon($icon-history-url);
 }
 
-.list-menu-float .icon-menu.export:before {
-    mask-image: $icon-export-url;
+.icon-menu.export:before {
+    @include icon($icon-export-url);
 }
 
-.list-menu-float .icon-menu.logout:before {
-    mask-image: $icon-logout-url;
+.icon-menu.logout:before {
+    @include icon($icon-logout-url);
 }
 
-.list-menu-float .icon-menu.setting .link-list-setting:before {
-    mask-image: $icon-list-settings-url;
+.icon-menu.setting .link-list-setting:before {
+    @include icon($icon-list-settings-url);
 }
 
-.list-menu-float .icon-menu.setting .link-style-setting:before {
-    mask-image: $icon-style-settings-url;
+.icon-menu.setting .link-style-setting:before {
+    @include icon($icon-style-settings-url);
 }
 
-.cover-block .image-container .btn-list-setting:before {
-    mask-image: $icon-change-profile-cover-url;
+.cover-block .image-container .btn-list-setting .fa-circle-plus {
+    @include icon($icon-change-profile-cover-url);
+}
+
+.list-table .list-table-data .data.score .score-label:before {
+    @include icon($icon-star-url, $icon-star-ratio);
 }
 

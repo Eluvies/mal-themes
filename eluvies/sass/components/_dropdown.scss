@@ -1,94 +1,279 @@
 @use '../abstracts/index' as *;
-@use '../themes/theme-variables' as *;
+@use '../../../core/sass/abstracts/variables' as *;
+@use "sass:math";
 
-// User menu dropdown
+// Dropdown header
+
+.header, .ownlist:not(:has(.list-menu-float)) .header .header-info,
+.list-menu-float  {
+    --dropdown-context-height: #{$header-height};
+    --dropdown-context-vertical-position: #{$header-height};
+}
+
+// Dropdown header list-menu
+
+.header .header-menu .btn-menu > a {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.header .header-menu .btn-menu > a:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    @extend %dropdown-toggle;
+}
+
+.header .header-menu .btn-menu > a:hover:before {
+    @extend %dropdown-toggle-active;
+}
+
+.header .header-menu .list-menu {
+    position: absolute;
+    right: 0;
+    top: calc(($header-height + 100%)/2);
+    display: block !important;
+    @extend %dropdown-menu;
+}
+
+.header .header-menu:has(.btn-menu > a:hover) .list-menu,
+.header .header-menu .list-menu:hover {
+    @extend %dropdown-menu-open;
+}
+
+.header .header-menu .list-menu .icon-menu {
+    @extend %dropdown-item;
+    @extend %dropdown-item-fade-out;
+}
+
+.header .header-menu:has(.btn-menu > a:hover) .list-menu .icon-menu,
+.header .header-menu .list-menu:hover .icon-menu {
+    @extend %dropdown-item-fade-in;
+}
+
+// Dropdown User menu
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info,
+.list-menu-float {
+    --dropdown-toggle-height: #{$avatar-size};
+}
+
+// Dropdown user menu: Guest
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info {
+    @extend %dropdown-menu;
+}
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info:before {
+    content: '';
+    @extend %avatar;
+    @extend %avatar-fixed-position;
+    mask-image: $icon-chevron-down-url;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+}
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info:after {
+    @extend %avatar;
+    @extend %avatar-fixed-position;
+    cursor: pointer;
+}
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info:hover:after {
+    @extend %dropdown-toggle-active;
+}
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info:hover {
+    @extend %dropdown-menu-open;
+}
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info {
+    font-size: 0;
+    line-height: 0;
+}
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info a {
+    @extend %text-md;
+    @extend %dropdown-item;
+    @extend %dropdown-item-fade-out;
+}
+
+.ownlist:not(:has(.list-menu-float)) .header .header-info:hover a {
+    @extend %dropdown-item-fade-in;
+}
+
+// Dropdown user menu: Logged-in
 
 .list-menu-float {
-    margin: $space-1 $space-1 0 0;
-    @include dropdown-container;
-    width: 256px;
+    @extend %dropdown-menu;
+    min-width: 240px;
+}
+
+.list-menu-float:before {
+    content: '';
+    cursor: pointer;
+    @extend %avatar;
+    @extend %avatar-fixed-position;
+}
+
+.list-menu-float:hover:before {
+    @extend %dropdown-toggle-active;
 }
 
 .list-menu-float:hover {
-    @include dropdown-container--hover($vertical-position: calc($header-height + $space-1), $height: 115.25 * $space-1);
+    @extend %dropdown-menu-open;
+    padding: $space-4;
 }
 
-.list-menu-float .icon-menu.profile {
-    margin: $space-4 + $space-2;
-}
-
-.list-menu-float .icon-menu:not(.profile,.setting),
+.list-menu-float .icon-menu:not(.setting),
 .list-menu-float .icon-menu.setting .text .link-list-setting,
 .list-menu-float .icon-menu.setting:hover .text .link-list-setting,
 .list-menu-float .icon-menu.setting .text .link-style-setting,
 .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
-    @include dropdown-item($space-4);
+    @extend %dropdown-item;
 }
 
+.list-menu-float .icon-menu.quick-add,
 .list-menu-float .icon-menu.statistics,
 .list-menu-float .icon-menu.setting .text .link-list-setting,
 .list-menu-float .icon-menu.setting:hover .text .link-list-setting,
-.list-menu-float .icon-menu.export {
-    @include dropdown-item-with-separator;
-}
-
-.list-menu-float .icon-menu.quick-add {
-    @include dropdown-item-with-separator(calc($space-2 + 1px));
-}
-
+.list-menu-float .icon-menu.export,
 .list-menu-float .icon-menu.logout {
-    @include dropdown-item-with-separator;
-    @include dropdown-item--last($space-4);
+    @extend %dropdown-item-separated;
 }
 
-// Status dropdown
+.list-menu-float > *:not(.icon-menu.profile), 
+.list-menu-float .icon-menu.profile:after {
+    @extend %dropdown-item-fade-out;
+}
 
-.status-menu-container .status-menu {
-    @include dropdown-container;
+.list-menu-float:hover > *:not(.icon-menu.profile), 
+.list-menu-float:hover .icon-menu.profile:after {
+    @extend %dropdown-item-fade-in;
+}
+
+.list-menu-float .icon-menu.profile {
+    flex-shrink: 0;
+    background-size: 0;
+    pointer-events: none;
+    margin: $space-2 0 $space-4;
+    
+    &:before {
+        content: '';
+        @extend %avatar;
+        @extend %avatar-fixed-position;
+    }
+    
+    &:after {
+        content: 'View Profile';
+        @extend %avatar;
+        display: block;
+        text-wrap: nowrap;
+        padding-block: calc(($avatar-size - 1lh) / 2);
+        text-indent: calc(100% + $space-3);
+        pointer-events: auto;
+    }
+}
+
+.list-menu-float .icon-menu.export {
+    order: 2;
+}
+
+.list-menu-float form {
+    order: 3;
+}
+
+// Dropdowns list toolbar 
+
+.status-menu-container, 
+.list-status-title {
+    --dropdown-context-height: #{$list-toolbar-height};
+    --dropdown-context-vertical-position: #{$header-height + $list-toolbar-height};
+}
+
+// Dropdown Status
+
+.status-menu-container .status-menu{ 
+    &:before, &:after {
+        content: var(--current-status, 'Status');
+        color: $text-color;
+        padding-right: calc($icon-size * $icon-chevron-down-ratio + $icon-text-gap);
+        margin-left: $page-padding;
+        @extend %dropdown-toggle;
+    }
+        
+    &:after {
+        background-color: currentColor;
+        mask-image: $icon-chevron-down-url;
+        mask-repeat: no-repeat;
+        mask-position: right center;
+        mask-size: auto $icon-size;
+    }
+    
+    &:has(.all_anime.on) {
+        --current-status: "All Anime";
+    }
+
+    &:has(.watching.on) {
+        --current-status: "Currently Watching";
+    }
+
+    &:has(.completed.on) {
+        --current-status: "Completed";
+    }
+
+    &:has(.onhold.on) {
+        --current-status: "On Hold";
+    }
+
+    &:has(.dropped.on) {
+        --current-status: "Dropped";
+    }
+
+    &:has(.plantowatch.on) {
+        --current-status: "Plan to Watch";
+    }
+}
+
+// Dropdown Status
+
+.status-menu-container .status-menu:hover:not(:has(.search-container:hover)):before {
+    @extend %dropdown-toggle-active;
+}
+
+.status-menu-container .status-menu, .status-menu-container.fixed .status-menu {
+    @extend %dropdown-menu;
 }
 
 .status-menu-container .status-menu:hover:not(:has(.search-container:hover)) {
-    @include dropdown-container--hover($height: 54 * $space-1);
-}
-
-.status-menu-container.fixed .status-menu:hover:not(:has(.search-container:hover)) {
-    @include dropdown-container--hover(calc($header-height + $list-toolbar-height + $space-1), $height: 54 * $space-1);
+    @extend %dropdown-menu-open; 
 }
 
 .status-menu-container .status-menu .status-button {
-    @include dropdown-item;
+    @extend %dropdown-item;
+    @extend %dropdown-item-fade-out;
 }
 
-.status-menu-container .status-menu .status-button:first-of-type {
-    @include dropdown-item--first;
+.status-menu-container .status-menu:hover .status-button {
+    @extend %dropdown-item-fade-in;
 }
 
-.status-menu-container .status-menu .status-button:last-of-type {
-    @include dropdown-item--last;
-}
-
-// Sort dropdown
+// Dropdown Sort
 
 .list-table-header {
-    @include dropdown-container;
+    @extend %dropdown-menu;
 }
 
-.list-table-header:hover {
-    @include dropdown-container--hover(0px, 0);
+.list-table-header:before {
+    @extend %dropdown-toggle;
 }
 
 #list-container .header-title {
-    @include dropdown-item;
+    @extend %dropdown-item;
 }
 
 #list-container .header-title:not(:has(>.link.sort)) {
-    display: none;
-}
-
-#list-container .header-title:has(>.link.sort):not(.header-title:has(>.link.sort) ~ .header-title:has(>.link.sort)) {
-    @include dropdown-item--first;
-}
-
-#list-container .header-title:has(.link.sort):not(:has(~.header-title)){
-    @include dropdown-item--last;
+    @extend %hidden;
 }

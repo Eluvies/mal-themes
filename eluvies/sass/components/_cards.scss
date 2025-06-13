@@ -74,20 +74,6 @@
 
     &.score .score-label {
         color: #f5c518;
-        display: flex;
-        align-items: center;
-
-        &:before {
-            content: '';
-            display: block;
-            background-color: currentColor;
-            mask-image: $icon-star-url;
-            mask-repeat: no-repeat;
-            mask-position: center calc(50% - 1px);
-            height: $icon-size;
-            width: $icon-size * $icon-star-ratio;
-            margin-right: 0.2ch;
-        }
     }
 }
 

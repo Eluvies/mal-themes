@@ -5,7 +5,7 @@
     width: min(100%, $content-max-width);
     padding: $space-2 $page-padding;
     text-align: center;
-    @include text-sm;
+    @extend %text-sm;
     
     /* More stats link */
 

@@ -1,4 +1,5 @@
 @use '../../../core/sass/abstracts/variables' as core;
+@use '../components/dropdown' as *;
 @use '../abstracts/index' as *;
 @use 'sass:math';
 
@@ -6,7 +7,7 @@
 .list-unit .list-status-title {
     display: flex;
     height: $list-toolbar-height;
-}   
+}
 
 .status-menu-container .search-container,
 .list-unit .list-status-title .stats {
@@ -15,76 +16,17 @@
 
 // List toolbar | Status menu
 
-.status-menu-container {
+.status-menu-container, .status-menu-container.fixed {
     position: sticky;
     z-index: 2;
     width: 100%;
     max-width: $content-max-width;
-    display: flex;
     top: $header-height;
+    padding-top: $header-height;
 }
 
-.status-menu-container.fixed {
-    display: flex;
-    position: sticky;
-    top: $header-height;
-}
-
-.status-menu-container .status-menu {
-    margin-top: $list-toolbar-height + $space-1;
-    margin-left: $space-1;
-    
-    .status-button:before,
-    .status-button:after {
-        content: var(--current-status);
-        color: $text-color;
-        top: calc(($list-toolbar-height - 1lh) / 2);
-        position: absolute;
-        cursor: pointer;
-        padding-right: calc(core.$icon-size * core.$icon-chevron-down-ratio + $icon-text-gap); 
-        left: $page-padding;
-    }
-    
-    .status-button.all_anime.on {
-        --current-status: "All Anime";
-    }
-
-    .status-button.watching.on {
-        --current-status: "Currently Watching";
-    }
-
-    .status-button.completed.on {
-        --current-status: "Completed";
-    }
-
-    .status-button.onhold.on {
-        --current-status: "On Hold";
-    }
-
-    .status-button.dropped.on {
-        --current-status: "Dropped";
-    }
-
-    .status-button.plantowatch.on {
-        --current-status: "Plan to Watch";
-    }
-
-    .status-button:after {
-        background-color: currentColor;
-        mask-image: core.$icon-chevron-down-url;
-        mask-repeat: no-repeat;
-        mask-position: right center;
-        mask-size: auto core.$icon-size;
-    }
-
-    &:hover:not(:has(.search-container:hover)) {        
-        .status-button:before{
-            height: calc(($list-toolbar-height + 1lh) / 2);
-        }
-    }
-    
+.status-menu-container .status-menu {        
     // Search
-
     .search-container {
         position: absolute;
         top: 0;
@@ -99,6 +41,7 @@
             content: 'FiltersStats';
             padding-right:  calc(23 / 16 * core.$icon-size + 2 * $icon-text-gap + 4 * $page-padding);
             visibility: hidden;
+            
         }
     }
 }
@@ -112,6 +55,7 @@
         gap: $icon-text-gap;
         align-items: center;
         height: 100%;
+        pointer-events: auto;
     
         &:hover {
             background-color: rgba(255, 255, 255, .1);

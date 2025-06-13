@@ -1,5 +1,4 @@
 :root {
-    
     // Colors
     --color-accent: #2E51A2;
     --base-hue: 221;
@@ -15,6 +14,7 @@
     --color-on-surface: var(--base-hue), 10%, 80%;
     --color-on-surface-secondary: var(--base-hue), 10%, 70%;
     --color-on-surface-hover: var(--base-hue), 40%, 80%;
+    --text-color: 0, 100%, 100%;
     
     // Misc
     --content-max-width: 1200px;

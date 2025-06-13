@@ -13,11 +13,11 @@ footer {
 }
 
 #copyright {
-    @include text-sm;
+    @extend %text-sm;
 }
 
 #recaptcha-terms {
-    @include text-xs;
+    @extend %text-xs;
 }
 
 #copyright + #recaptcha-terms {

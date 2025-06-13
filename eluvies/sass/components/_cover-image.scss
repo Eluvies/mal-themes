@@ -29,7 +29,6 @@
     padding: $space-2;
 }
 
-.cover-block .image-container .btn-list-setting .fa-solid,
 .cover-block .image-container .btn-list-setting:hover .text,
 .cover-block .image-container .btn-list-setting .text {
     display: none;
@@ -38,6 +37,11 @@
 .cover-block .image-container .btn-list-setting {
     opacity: 0;
     transition: opacity .25s ease-in-out;
+    line-height: 1rem;
+}
+
+.cover-block .image-container .btn-list-setting > * {
+    height: fit-content;
 }
 
 .cover-block .image-container:hover .btn-list-setting {

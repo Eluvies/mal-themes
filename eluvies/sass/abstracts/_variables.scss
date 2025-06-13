@@ -1,20 +1,29 @@
 @use 'sass:math';
 
+
+
+// Spacing
+
 $spacing: 0.25rem;
+
+$space-1: 1 * $spacing;
+$space-2: 2 * $spacing;
+$space-3: 3 * $spacing;
+$space-4: 4 * $spacing;
 
 // Layout
 
 $header-height: 12 * $spacing;
 $header-logo-height: 5 * $spacing;
-$page-padding: 4 * $spacing;
+$page-padding: $space-4;
 $content-max-width: 1200px;
 
 // List
 
 $list-toolbar-height: 12 * $spacing;
 $list-max-columns: 6;
-$card-padding: 4 * $spacing;
-$card-border-radius: 0.5rem;
+$card-padding: $space-4;
+$card-border-radius: 2 * $spacing;
 
 // Text
 
@@ -26,27 +35,22 @@ $font-size-xl: 1.5rem;
 
 $text-color: #ffffff;
 
-// Spacing
-
-$space-1: 1 * $spacing;
-$space-2: 2 * $spacing;
-$space-3: 3 * $spacing;
-$space-4: 4 * $spacing;
-$space-5: 5 * $spacing;
-$space-6: 6 * $spacing;
-
 // Dropdown
 
-$dropdown-padding: $space-3;
+$dropdown-menu-margin: $space-1;
+$dropdown-menu-padding: $space-2;
+$dropdown-menu-transition-duration: 0.25s;
+$dropdown-menu-timing-function: ease-in-out;
 $dropdown-item-height: 8 * $spacing;
-$dropdown-border-radius: 0.375rem;
+$dropdown-item-padding-x: $space-2;
+$drodpown-item-separator-height: 1px;
 
 // Misc
 
-$avatar-size: 32px;
-$icon-text-gap: 1ch;
+$avatar-size: 2rem;
+$icon-text-gap: $space-2;
 
-$border-radius-sm: 1 * $spacing;
-$border-radius-md: 2 * $spacing;
-$border-radius-lg: 3 * $spacing;
+$border-radius-sm: 0.375rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 0.75rem;
 $border-radius-full: 999rem;

@@ -1,7 +1,5 @@
-@use '../abstracts/index' as *;
-@use 'theme-variables' as *;
-
 body.ownlist:not(.classic-ownlist) {
+    --dropdown-menu-background-color: var(--color-surface-4);
     background-color: hsl(var(--color-background)) !important;
 }
 
@@ -11,19 +9,24 @@ body.ownlist:not(.classic-ownlist) {
     background-color: hsl(var(--color-primary));
 }
 
+//
+
+.header .header-info a:hover {
+    background-color: hsl(var(--color-surface-3));
+}
+
+.header .header-menu .list-menu .icon-menu:hover {
+    background-color: hsl(var(--color-surface-3));
+}
 
 // User menu
-
-.list-menu-float {
-    background-color: hsl(var(--color-surface-4));
-}
 
 .list-menu-float .icon-menu.quick-add:after,
 .list-menu-float .icon-menu.statistics:after,
 .list-menu-float .icon-menu.setting .text .link-list-setting:after,
 .list-menu-float .icon-menu.export:after,
 .list-menu-float .icon-menu.logout:after {
-    border-bottom-color: hsl(var(--color-surface-1));
+    background-color: hsl(var(--color-surface-1));
 }
 
 // User menu dropdown item hover
@@ -38,12 +41,6 @@ body.ownlist:not(.classic-ownlist) {
     }
 }
 
-// Status dropdown
-
-.status-menu-container .status-menu {
-    background-color: hsl(var(--color-surface-4));
-}
-
 // Status dropdown item hover
 
 .status-menu-container .status-menu .status-button:hover {
@@ -52,9 +49,7 @@ body.ownlist:not(.classic-ownlist) {
 
 // Sort dropdown
 
-.list-table-header {
-    background-color: hsl(var(--color-surface-4));
-}
+
 
 // Sort dropdown item hover
 

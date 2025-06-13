@@ -1,51 +1,29 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/index' as *;
 
-body.ownlist .fa-solid {
-    font-family: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    display: inline-block;
-    vertical-align: middle;
+body.ownlist .fa-solid:before {
+    @extend %hidden;
 }
 
-/*
- * 1. Get mask image
- * 2. Get icon aspect-ratio
- *    Icon aspect-ratio = icon size × aspect ratio
- * 3. Put the icon as a mask
- */
-
-#search-button,
-#show-stats-button,
-#advanced-options-button,
-.floatRightHeader {
-    >.fa-solid:before {
-        content: "";
-        display: inline-block;
-        background-color: currentColor;
-        height: $icon-size;
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: auto 100%;
-    }
+.fa-solid.fa-magnifying-glass {
+    @include icon($icon-search-url, $icon-search-ratio)
 }
 
-#search-button>.fa-solid:before {
-    mask-image: $icon-search-url;
-    aspect-ratio: $icon-search-ratio;
+.fa-solid.fa-filter {
+    @include icon($icon-filter-url, $icon-filter-ratio);
 }
 
-#advanced-options-button>.fa-solid:before {
-    mask-image: $icon-filter-url;
-    aspect-ratio: $icon-filter-ratio;
+.fa-solid.fa-chart-column {
+    @include icon($icon-stats-url, $icon-stats-ratio);
 }
 
-#show-stats-button>.fa-solid:before {
-    mask-image: $icon-stats-url;
-    aspect-ratio: $icon-stats-ratio;
+.fa-regular.fa-angle-down {
+    @include icon($icon-chevron-down-url, $icon-chevron-down-ratio);
 }
 
-.floatRightHeader>.fa-solid:before {
-    mask-image: $icon-chevron-right-url;
-    aspect-ratio: $icon-chevron-right-ratio;
+.fa-solid.fa-angle-right {
+    @include icon($icon-chevron-right-url, $icon-chevron-right-ratio);
+}
+
+.fa-solid.fa-clock-rotate-left {
+    @include icon($icon-history-url, $icon-history-ratio);
 }
