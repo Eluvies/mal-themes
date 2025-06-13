@@ -69,16 +69,14 @@
     content: '';
     @extend %avatar;
     @extend %avatar-fixed-position;
-    mask-image: $icon-chevron-down-url;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: cover;
+    background-image: $icon-user-avatar-url;
 }
 
 .ownlist:not(:has(.list-menu-float)) .header .header-info:after {
+    content: '';
+    cursor: pointer;
     @extend %avatar;
     @extend %avatar-fixed-position;
-    cursor: pointer;
 }
 
 .ownlist:not(:has(.list-menu-float)) .header .header-info:hover:after {

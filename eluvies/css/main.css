@@ -1527,17 +1527,11 @@ footer {
 
 .ownlist:not(:has(.list-menu-float)) .header .header-info:before {
   content: "";
-  -webkit-mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/chevron-down.svg");
-          mask-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/chevron-down.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  background-image: url("https://eluvies.github.io/mal-themes/core/assets/icons/user-avatar.svg");
 }
 
 .ownlist:not(:has(.list-menu-float)) .header .header-info:after {
+  content: "";
   cursor: pointer;
 }
 
