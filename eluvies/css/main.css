@@ -1419,8 +1419,8 @@ body {
   margin-right: 3rem;
 }
 
-.list-menu-float,
-.header .header-info {
+.header .header-info,
+.list-menu-float {
   position: fixed;
   top: 3rem;
   right: max(0px, (100vw - 1200px) / 2);
@@ -1624,7 +1624,22 @@ footer {
 .cover-block {
   width: 100%;
   max-width: 1200px;
-  aspect-ratio: 15/4;
+  height: 160px;
+}
+@media (min-width: 576px) {
+  .cover-block {
+    height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .cover-block {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .cover-block {
+    height: 300px;
+  }
 }
 
 .cover-block .image-container {

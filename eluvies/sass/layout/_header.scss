@@ -47,7 +47,7 @@
     }
 }
 
-// Header-menu
+// Header right
 
 .header .header-menu {
     position: relative;
@@ -57,10 +57,8 @@
     margin-right: $avatar-size + $space-4;
 }
 
-// Header avatar
-
-.list-menu-float,
-.header .header-info  {
+.header .header-info,
+.list-menu-float  {
     position: fixed;
     top: $header-height;
     right: max(0px, (100vw - $content-max-width) / 2);

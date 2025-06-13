@@ -1,9 +1,22 @@
 @use '../abstracts/index' as *;
+@use 'sass:math';
 
 .cover-block {
     width: 100%;
     max-width: $content-max-width;
-    aspect-ratio: 15 / 4;
+    height: 160px;
+    
+    @media (min-width: 576px) {
+        height: 200px;
+    }
+    
+    @media (min-width: 768px) {
+        height: 250px;
+    }
+    
+    @media (min-width: 992px) {
+        height: 300px;
+    }
 }
 
 .cover-block .image-container {
