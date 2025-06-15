@@ -234,6 +234,14 @@
     &:has(.plantowatch.on) {
         --current-status: "Plan to Watch";
     }
+    
+    &:has(.reading.on) {
+        --current-status: "Reading";
+    }
+    
+    &:has(.plantoread.on) {
+        --current-status: "Plan to Read";
+    }
 }
 
 // Dropdown Status
