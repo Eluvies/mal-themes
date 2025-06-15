@@ -1630,7 +1630,7 @@ footer {
   --current-status: "Plan to Watch";
 }
 .status-menu-container .status-menu:has(.reading.on) {
-  --current-status: "Reading";
+  --current-status: "Currently Reading";
 }
 .status-menu-container .status-menu:has(.plantoread.on) {
   --current-status: "Plan to Read";

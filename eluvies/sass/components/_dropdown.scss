@@ -240,7 +240,7 @@
     }
     
     &:has(.reading.on) {
-        --current-status: "Reading";
+        --current-status: "Currently Reading";
     }
     
     &:has(.plantoread.on) {
