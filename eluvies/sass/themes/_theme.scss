@@ -1,5 +1,7 @@
 body.ownlist:not(.classic-ownlist) {
     --dropdown-menu-background-color: var(--color-surface-4);
+    --dropdown-item-hover-background-color: var(--color-surface-3);
+    --dropdown-item-separator-background-color: var(--color-surface-1);
     background-color: hsl(var(--color-background)) !important;
 }
 
@@ -7,54 +9,6 @@ body.ownlist:not(.classic-ownlist) {
 
 .header:before {
     background-color: hsl(var(--color-primary));
-}
-
-//
-
-.header .header-info a:hover {
-    background-color: hsl(var(--color-surface-3));
-}
-
-.header .header-menu .list-menu .icon-menu:hover {
-    background-color: hsl(var(--color-surface-3));
-}
-
-// User menu
-
-.list-menu-float .icon-menu.quick-add:after,
-.list-menu-float .icon-menu.statistics:after,
-.list-menu-float .icon-menu.setting .text .link-list-setting:after,
-.list-menu-float .icon-menu.export:after,
-.list-menu-float .icon-menu.logout:after {
-    background-color: hsl(var(--color-surface-1));
-}
-
-// User menu dropdown item hover
-
-.list-menu-float .icon-menu:not(.profile, .setting),
-.list-menu-float .icon-menu.setting .text .link-list-setting,
-.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
-.list-menu-float .icon-menu.setting .text .link-style-setting,
-.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
-    &:hover {
-        background-color: hsl(var(--color-surface-3));
-    }
-}
-
-// Status dropdown item hover
-
-.status-menu-container .status-menu .status-button:hover {
-    background-color: hsl(var(--color-surface-3));
-}
-
-// Sort dropdown
-
-
-
-// Sort dropdown item hover
-
-.list-table-header .header-title:hover {
-    background-color: hsl(var(--color-surface-3));
 }
 
 // List

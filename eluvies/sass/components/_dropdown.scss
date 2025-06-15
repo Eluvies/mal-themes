@@ -135,8 +135,7 @@
 
 .list-menu-float .icon-menu.quick-add,
 .list-menu-float .icon-menu.statistics,
-.list-menu-float .icon-menu.setting .text .link-list-setting,
-.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting,
 .list-menu-float .icon-menu.export,
 .list-menu-float .icon-menu.logout {
     @extend %dropdown-item-separated;
