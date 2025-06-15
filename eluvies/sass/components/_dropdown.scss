@@ -211,8 +211,12 @@
         mask-size: auto $icon-size;
     }
     
-    &:has(.all_anime.on) {
+    &:has(.all_anime.on):not(:has(.reading)) {
         --current-status: "All Anime";
+    }
+    
+    &:has(.reading, .all_anime.on) {
+        --current-status: "All Manga";
     }
 
     &:has(.watching.on) {

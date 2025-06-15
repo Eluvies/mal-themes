@@ -1608,8 +1608,11 @@ footer {
   -webkit-mask-size: auto 1.1428571429em;
           mask-size: auto 1.1428571429em;
 }
-.status-menu-container .status-menu:has(.all_anime.on) {
+.status-menu-container .status-menu:has(.all_anime.on):not(:has(.reading)) {
   --current-status: "All Anime";
+}
+.status-menu-container .status-menu:has(.reading, .all_anime.on) {
+  --current-status: "All Manga";
 }
 .status-menu-container .status-menu:has(.watching.on) {
   --current-status: "Currently Watching";
