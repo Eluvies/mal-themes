@@ -1281,7 +1281,7 @@ a {
   padding: 0.5rem;
   background-color: hsl(var(--dropdown-menu-background-color), 1);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-  transition: height 0s, padding 0s;
+  transition: height 0s, padding 0s, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
 .header .header-menu .list-menu .icon-menu, .ownlist:not(:has(.list-menu-float)) .header .header-info a, .list-menu-float > *:not(.icon-menu.profile),
