@@ -37,8 +37,8 @@ $text-color: #ffffff;
 
 // Dropdown
 
-$dropdown-menu-margin-top: $space-1;
 $dropdown-menu-padding: $space-2;
+$dropdown-menu-offset-y: calc((var(--dropdown-context-height, 1lh) + var(--dropdown-toggle-height, 1lh)) / 2);
 $dropdown-menu-transition-duration: 0.25s;
 $dropdown-menu-timing-function: ease-in-out;
 $dropdown-item-height: 8 * $spacing;

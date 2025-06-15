@@ -18,11 +18,11 @@
 
 .status-menu-container, .status-menu-container.fixed {
     position: sticky;
+    display: flex;
     z-index: 2;
     width: 100%;
     max-width: $content-max-width;
     top: $header-height;
-    padding-top: $header-height;
 }
 
 .status-menu-container .status-menu {        

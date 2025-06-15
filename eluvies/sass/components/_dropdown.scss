@@ -8,7 +8,7 @@
 .ownlist:not(:has(.list-menu-float)) .header .header-info,
 .list-menu-float  {
     --dropdown-context-height: #{$header-height};
-    --dropdown-context-vertical-position: #{$header-height};
+    --dropdown-context-vertical-position: 0px;
 }
 
 // Dropdown header list-menu
@@ -33,7 +33,6 @@
 .header .header-menu .list-menu {
     position: absolute;
     right: 0;
-    top: calc(($header-height + 100%)/2);
     display: block !important;
     @extend %dropdown-menu;
 }
@@ -58,6 +57,8 @@
 .ownlist:not(:has(.list-menu-float)) .header .header-info,
 .list-menu-float {
     --dropdown-toggle-height: #{$avatar-size};
+    right: max(0px, (100vw - $content-max-width) / 2);
+    margin-right: $space-1;
 }
 
 // Dropdown user menu: Guest
@@ -188,12 +189,12 @@
 .status-menu-container, 
 .list-status-title {
     --dropdown-context-height: #{$list-toolbar-height};
-    --dropdown-context-vertical-position: #{$header-height + $list-toolbar-height};
+    --dropdown-context-vertical-position: #{$header-height};
 }
 
 // Dropdown Status
 
-.status-menu-container .status-menu{ 
+.status-menu-container .status-menu{    
     &:before, &:after {
         content: var(--current-status, 'Status');
         color: $text-color;
