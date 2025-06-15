@@ -12,20 +12,20 @@
 
 // Dropdown header list-menu
 
-.header .header-menu .btn-menu > a {
+#header-menu-button {
     position: relative;
     display: inline-flex;
     vertical-align: top;
 }
 
-.header .header-menu .btn-menu > a:before {
+#header-menu-button:before {
     content: '';
     width: 100%;
     height: 100%;
     @extend %dropdown-toggle;
 }
 
-.header .header-menu .btn-menu > a:hover:before {
+#header-menu-button:hover:before {
     @extend %dropdown-toggle-active;
 }
 
@@ -37,7 +37,7 @@
     @extend %dropdown-menu;
 }
 
-.header .header-menu:has(.btn-menu > a:hover) .list-menu,
+.header .header-menu:has(#header-menu-button:hover) .list-menu,
 .header .header-menu .list-menu:hover {
     @extend %dropdown-menu-open;
 }
@@ -47,7 +47,7 @@
     @extend %dropdown-item-fade-out;
 }
 
-.header .header-menu:has(.btn-menu > a:hover) .list-menu .icon-menu,
+.header .header-menu:has(#header-menu-button:hover) .list-menu .icon-menu,
 .header .header-menu .list-menu:hover .icon-menu {
     @extend %dropdown-item-fade-in;
 }

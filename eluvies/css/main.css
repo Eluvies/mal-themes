@@ -1274,7 +1274,7 @@ a {
   transition: height 0s 0.25s allow-discrete, padding 0s 0.25s, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
-.header .header-menu:has(.btn-menu > a:hover) .list-menu,
+.header .header-menu:has(#header-menu-button:hover) .list-menu,
 .header .header-menu .list-menu:hover, .ownlist:not(:has(.list-menu-float)) .header .header-info:hover, .list-menu-float:hover, .status-menu-container .status-menu:hover:not(:has(.search-container:hover)) {
   height: -moz-fit-content;
   height: fit-content;
@@ -1290,20 +1290,20 @@ a {
   transition: opacity 0.25s ease-in-out;
 }
 
-.header .header-menu:has(.btn-menu > a:hover) .list-menu .icon-menu,
+.header .header-menu:has(#header-menu-button:hover) .list-menu .icon-menu,
 .header .header-menu .list-menu:hover .icon-menu, .ownlist:not(:has(.list-menu-float)) .header .header-info:hover a, .list-menu-float:hover > *:not(.icon-menu.profile),
 .list-menu-float:hover .icon-menu.profile:after, .status-menu-container .status-menu:hover .status-button {
   opacity: 1;
 }
 
-.header .header-menu .btn-menu > a:before, .status-menu-container .status-menu:before, .status-menu-container .status-menu:after, .list-table-header:before {
+#header-menu-button:before, .status-menu-container .status-menu:before, .status-menu-container .status-menu:after, .list-table-header:before {
   position: absolute;
   cursor: pointer;
   top: calc(50% - var(--dropdown-toggle-height, 1lh) / 2);
   left: 0;
 }
 
-.header .header-menu .btn-menu > a:hover:before, .ownlist:not(:has(.list-menu-float)) .header .header-info:hover:after, .list-menu-float:hover:before, .status-menu-container .status-menu:hover:not(:has(.search-container:hover)):before {
+#header-menu-button:hover:before, .ownlist:not(:has(.list-menu-float)) .header .header-info:hover:after, .list-menu-float:hover:before, .status-menu-container .status-menu:hover:not(:has(.search-container:hover)):before {
   height: calc((var(--dropdown-context-height, 100%) + var(--dropdown-toggle-height, 1lh)) / 2 + 0.25rem);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -1507,13 +1507,13 @@ footer {
   --dropdown-context-vertical-position: 3rem;
 }
 
-.header .header-menu .btn-menu > a {
+#header-menu-button {
   position: relative;
   display: inline-flex;
   vertical-align: top;
 }
 
-.header .header-menu .btn-menu > a:before {
+#header-menu-button:before {
   content: "";
   width: 100%;
   height: 100%;
