@@ -1500,7 +1500,6 @@ footer {
   margin-top: 0.25rem;
 }
 
-.header,
 .ownlist:not(:has(.list-menu-float)) .header .header-info,
 .list-menu-float {
   --dropdown-context-height: 3rem;
@@ -1521,6 +1520,7 @@ footer {
 
 .header .header-menu .list-menu {
   position: absolute;
+  top: 0;
   right: 0;
   display: block !important;
 }
