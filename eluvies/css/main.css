@@ -1263,14 +1263,14 @@ a {
   width: -moz-fit-content;
   width: fit-content;
   height: 0;
-  margin: 0.25rem;
+  margin-top: 0.25rem;
   border-radius: 0.75rem;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 0;
   background-color: hsl(var(--dropdown-menu-background-color), 0);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
-  max-height: min(100vh - var(--dropdown-context-vertical-position, 0) - 0.5rem, 30rem);
+  max-height: min(100vh - var(--dropdown-context-vertical-position, 0) - 0.25rem, 30rem);
   transition: height 0s 0.25s allow-discrete, padding 0s 0.25s, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
@@ -1430,6 +1430,7 @@ body {
   position: fixed;
   top: 3rem;
   right: max(0px, (100vw - 1200px) / 2);
+  margin-right: 0.25rem;
   z-index: 3;
 }
 
@@ -1501,7 +1502,8 @@ footer {
   margin-top: 0.25rem;
 }
 
-.header, .ownlist:not(:has(.list-menu-float)) .header .header-info,
+.header,
+.ownlist:not(:has(.list-menu-float)) .header .header-info,
 .list-menu-float {
   --dropdown-context-height: 3rem;
   --dropdown-context-vertical-position: 3rem;
@@ -1710,6 +1712,7 @@ footer {
   max-width: 1200px;
   top: 3rem;
   padding-top: 3rem;
+  margin-left: 0.25rem;
 }
 
 .status-menu-container .status-menu .search-container {

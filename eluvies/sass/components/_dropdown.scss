@@ -4,7 +4,8 @@
 
 // Dropdown header
 
-.header, .ownlist:not(:has(.list-menu-float)) .header .header-info,
+.header, 
+.ownlist:not(:has(.list-menu-float)) .header .header-info,
 .list-menu-float  {
     --dropdown-context-height: #{$header-height};
     --dropdown-context-vertical-position: #{$header-height};
