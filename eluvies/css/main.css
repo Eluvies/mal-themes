@@ -1712,9 +1712,11 @@ footer {
   max-width: 1200px;
   top: 3rem;
   padding-top: 3rem;
-  margin-left: 0.25rem;
 }
 
+.status-menu-container .status-menu {
+  margin-left: 0.25rem;
+}
 .status-menu-container .status-menu .search-container {
   position: absolute;
   top: 0;
