@@ -1253,7 +1253,7 @@ a {
 .ownlist:not(:has(.list-menu-float)) .header .header-info:before, .ownlist:not(:has(.list-menu-float)) .header .header-info:after, .list-menu-float:before, .list-menu-float .icon-menu.profile:before {
   position: fixed;
   top: 0.5rem;
-  right: max(0px, (100% - 1200px) / 2);
+  right: max(0px, (100% - (1152px + 7rem)) / 2);
   margin-right: 1rem;
 }
 
@@ -1376,7 +1376,8 @@ body {
 
 .header {
   position: sticky;
-  width: min(100%, 1200px);
+  width: 100%;
+  max-width: calc(1152px + 7rem);
   top: 0;
   margin: 0 auto;
   z-index: 3;
@@ -1385,6 +1386,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  gap: 1rem;
 }
 .header:before {
   content: "";
@@ -1424,6 +1426,10 @@ body {
   margin-right: 3rem;
 }
 
+.header .header-menu .btn-menu {
+  text-align: right;
+}
+
 .header .header-info,
 .list-menu-float {
   position: fixed;
@@ -1436,7 +1442,7 @@ body {
 }
 
 .list-container {
-  max-width: 1200px;
+  max-width: calc(1152px + 7rem);
   margin: 0 auto;
 }
 
@@ -1491,7 +1497,7 @@ footer {
   text-align: center;
   padding: 1rem 1rem;
   width: 100% !important;
-  max-width: 1200px;
+  max-width: calc(1152px + 7rem);
   margin: 0 auto;
 }
 
@@ -1527,7 +1533,7 @@ footer {
 .ownlist:not(:has(.list-menu-float)) .header .header-info,
 .list-menu-float {
   --dropdown-toggle-height: 2rem;
-  right: max(0px, (100vw - 1200px) / 2);
+  right: max(0px, (100vw - (1152px + 7rem)) / 2);
   margin-right: 0.25rem;
 }
 
@@ -1638,7 +1644,7 @@ footer {
 
 .cover-block {
   width: 100%;
-  max-width: 1200px;
+  max-width: calc(1152px + 7rem);
   height: 160px;
 }
 @media (min-width: 576px) {
@@ -1717,7 +1723,7 @@ footer {
   display: flex;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
+  max-width: calc(1152px + 7rem);
   top: 3rem;
 }
 
@@ -1778,7 +1784,7 @@ footer {
 
 .list-unit .list-stats {
   display: none;
-  width: min(100%, 1200px);
+  width: min(100%, 1152px + 7rem);
   padding: 0.5rem 1rem;
   text-align: center;
   /* More stats link */
@@ -1864,6 +1870,15 @@ footer {
 }
 .list-table .list-table-data .data.score .score-label {
   color: #f5c518;
+}
+
+.list-table .list-table-data .data.title .link {
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 #list-container .data.image,

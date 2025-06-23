@@ -4,7 +4,8 @@
 
 .header {
     position: sticky;
-    width: min(100%, $content-max-width);
+    width: 100%;
+    max-width: $content-max-width;
     top: 0;
     margin: 0 auto;
     z-index: 3;
@@ -13,6 +14,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 $page-padding;
+    gap: $space-4;
 
     // Header background
 
@@ -55,6 +57,10 @@
     align-items: center;
     order: 1;
     margin-right: $avatar-size + $space-4;
+}
+
+.header .header-menu .btn-menu {
+    text-align: right;
 }
 
 .header .header-info,

@@ -77,6 +77,13 @@
     }
 }
 
+.list-table .list-table-data .data.title .link {
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+    display: block;
+    max-width: fit-content;
+}
 
 #list-container .data.image,
 #list-container .data.image a,
