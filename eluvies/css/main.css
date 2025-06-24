@@ -1457,31 +1457,36 @@ body {
 
 .list-table {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
   justify-content: center;
   overflow: hidden;
   width: 100%;
   padding: 1rem 1rem;
 }
-@media (width < 801px) {
-  .list-table {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-@media (width < 641px) {
-  .list-table {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-@media (width < 481px) {
+@media (width > calc(192px * 1 + 1rem * 2)) {
   .list-table {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (width < 321px) {
+@media (width > calc(192px * 2 + 1rem * 3)) {
   .list-table {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (width > calc(192px * 3 + 1rem * 4)) {
+  .list-table {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (width > calc(192px * 4 + 1rem * 5)) {
+  .list-table {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media (width > calc(192px * 5 + 1rem * 6)) {
+  .list-table {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 

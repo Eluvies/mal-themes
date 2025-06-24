@@ -1,3 +1,13 @@
 @use 'variables' as *;
 @use 'functions' as *;
 @use 'placeholders' as *;
+
+@mixin responsive-list-grid-columns($max-cols: $list-max-columns, $min-cols: 2) {
+  @for $i from $min-cols through $max-cols {  
+    $breakpoint-width: calc(#{$card-max-width} * #{$i - 1} + #{$page-padding} * #{$i});
+
+    @media (width > #{$breakpoint-width}) {
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+  }
+}

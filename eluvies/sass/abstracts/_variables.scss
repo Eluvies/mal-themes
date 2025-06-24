@@ -22,8 +22,9 @@ $list-toolbar-height: 12 * $spacing;
 $list-max-columns: 6;
 $card-padding: $space-4;
 $card-border-radius: 2 * $spacing;
+$card-max-width: 192px;
 
-$content-max-width: calc(192px * $list-max-columns + $page-padding * ($list-max-columns + 1));
+$content-max-width: calc($card-max-width * $list-max-columns + $page-padding * ($list-max-columns + 1));
 
 // Text
 
